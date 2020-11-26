@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Sleek - Admin Dashboard Template</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
+          rel="stylesheet"/>
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet"/>
+
+    <!-- PLUGINS CSS STYLE -->
+    <link href="../../static/assets/plugins/toaster/toastr.min.css" rel="stylesheet"/>
+    <link href="../../static/assets/plugins/nprogress/nprogress.css" rel="stylesheet"/>
+    <link href="../../static/assets/plugins/flag-icons/css/flag-icon.min.css" rel="stylesheet"/>
+    <link href="../../static/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+    <link href="../../static/assets/plugins/ladda/ladda.min.css" rel="stylesheet"/>
+    <link href="../../static/assets/plugins/select2/css/select2.min.css" rel="stylesheet"/>
+    <link href="../../static/assets/plugins/daterangepicker/daterangepicker.css" rel="stylesheet"/>
+
+    <!-- SLEEK CSS -->
+    <link id="sleek-css" rel="stylesheet" href="../../static/assets/css/sleek.css"/>
+
+
+    <!-- FAVICON -->
+    <link href="../../static/assets/img/favicon.png" rel="shortcut icon"/>
+
+    <!--
+      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="../../static/assets/plugins/nprogress/nprogress.js"></script>
+    <script src="../../static/assets/d3.js" charset="utf-8"></script>
+    <script src="../../static/assets/d3.min.js" charset="utf-8"></script>
+    <script src="../../static/assets/echarts.min.js"></script>
+
+
+    <script src="../../static/assets/plugins/jquery/jquery.min.js"></script>
+</head>
+
+
+<body class="sidebar-fixed sidebar-dark header-light header-fixed" id="body">
+<script>
+    NProgress.configure({showSpinner: false});
+    NProgress.start();
+</script>
+
+<div class="mobile-sticky-body-overlay"></div>
+
+<div class="wrapper">
+
+    <!--
+====================================
+——— LEFT SIDEBAR WITH FOOTER
+=====================================
+-->
+    <aside class="left-sidebar bg-sidebar">
+        <div id="sidebar" class="sidebar sidebar-with-footer">
+            <!-- Aplication Brand -->
+            <div class="app-brand">
+                <a href="/index.html">
+                    <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+                         width="30" height="33" viewBox="0 0 30 33">
+                        <g fill="none" fill-rule="evenodd">
+                            <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
+                            <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
+                        </g>
+                    </svg>
+                    <span class="brand-name">交管决策指挥中心</span>
+                </a>
+            </div>
+            <!-- begin sidebar scrollbar -->
+            <div class="sidebar-scrollbar">
+
+                <!-- sidebar menu -->
+                <ul class="nav sidebar-inner" id="sidebar-menu">
+                    <!--交通事件特征分析-->
+                    <li class="has-sub expand">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#trafficeventfeature" aria-expanded="false" aria-controls="dashboard">
+                            <i class="mdi mdi-view-dashboard-outline"></i>
+                            <span class="nav-text">交通事件特征分析</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse show" id="trafficeventfeature" data-parent="#sidebar-menu">
+                            <div class="sub-menu">
+                                <li>
+                                    <a class="sidenav-item-link" href="accident">
+                                        <span class="nav-text">交通事故</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="/weifa">
+                                        <span class="nav-text">交通违法</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="/guihua">
+                                        <span class="nav-text">交通规划</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="/traffic_jam_INDEX_ROAD_INDEX">
+                                        <span class="nav-text">交通拥堵</span>
+                                    </a>
+                                </li>
+                                <!-- <li>
+                                    <a class="sidenav-item-link" href="/tufaevent">
+                                        <span class="nav-text">突发事件</span>
+                                    </a>
+                                </li> -->
+                                <li>
+                                    <a class="sidenav-item-link" href="/yuan">
+                                        <span class="nav-text">交通预案</span>
+                                    </a>
+                                </li>
+                                <!-- <li>
+                                    <a class="sidenav-item-link" href="/weather">
+                                        <span class="nav-text">气象影响</span>
+                                    </a>
+                                </li> -->
+                                <!-- <li>
+                                    <a class="sidenav-item-link" href="/volum">
+                                        <span class="nav-text">交通流量</span>
+                                    </a>
+                                </li> -->
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!--情报数据展示-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#qbsjzs"
+                           aria-expanded="false" aria-controls="icons">
+                            <i class="mdi mdi-book-open-page-variant"></i>
+                            <span class="nav-text">情报数据展示</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="qbsjzs">
+                            <div class="sub-menu">
+                                <li>
+                                    <a href="/intelligen">情报数据展示</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--事件研判分析-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#shijianyanpan" aria-expanded="false" aria-controls="icons">
+                            <i class="mdi mdi-chart-pie"></i>
+                            <span class="nav-text">事件研判分析</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="shijianyanpan">
+                            <div class="sub-menu">
+                                <li>
+                                    <a href="/Traffic_Accident">全市事故统计</a>
+                                </li>
+                                <li>
+                                    <a href="/Illegal">全市违法统计</a>
+                                </li>
+                                <li>
+                                    <a href="/showVideo">视频信息</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--知识图谱-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
+                            <i class="mdi mdi-image-filter-none"></i>
+                            <span class="nav-text">知识图谱</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
+                            <div class="sub-menu">
+                                <li class="has-sub">
+                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                       data-target="#components" aria-expanded="false" aria-controls="components">
+                                        <span class="nav-text">知识图谱展示</span> <b class="caret"></b>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                       data-target="#icons" aria-expanded="false" aria-controls="icons">
+                                        <span class="nav-text">知识图谱应用场景</span> <b class="caret"></b>
+                                    </a>
+                                    <ul class="collapse" id="icons">
+                                        <div class="sub-menu">
+                                            <li>
+                                                <a href="../material-icon.html">拥堵预测</a>
+                                            </li>
+                                            <li>
+                                                <a href="../flag-icon.html">拥堵蔓延分析</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!--事件图谱-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#charts" aria-expanded="false" aria-controls="charts">
+                            <i class="mdi mdi-folder-multiple-outline"></i>
+                            <span class="nav-text">事件图谱</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="charts" data-parent="#sidebar-menu">
+                            <div class="sub-menu">
+                                <li>
+                                    <a class="sidenav-item-link" href="Police_case">
+                                        <span class="nav-text">事件图谱展示</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="eventgraph_appilication">
+                                        <span class="nav-text">事件图谱应用场景</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--视频理解-->
+                    <!-- <li  class="has-sub" >
+            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#pages"
+               aria-expanded="false" aria-controls="pages">
+              <i class="mdi mdi-image-filter-none"></i>
+              <span class="nav-text">视频理解</span> <b class="caret"></b>
+            </a>
+            <ul  class="collapse"  id="pages"
+                 data-parent="#sidebar-menu">
+              <div class="sub-menu">
+                <li >
+                  <a class="sidenav-item-link" href="../user-profile.html">
+                    <span class="nav-text">视频属性概要展示</span>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </li> -->
+
+                    <!--对话系统-->
+                    <!-- <li  class="has-sub" >
+            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#documentation"
+               aria-expanded="false" aria-controls="documentation">
+              <i class="mdi mdi-book-open-page-variant"></i>
+              <span class="nav-text">对话系统</span> <b class="caret"></b>
+            </a>
+            <ul  class="collapse"  id="documentation"
+                 data-parent="#sidebar-menu">
+              <div class="sub-menu">
+                <li >
+                  <a class="sidenav-item-link" href="rtl.html">
+                    <span class="nav-text">对话场景展示</span>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </li> -->
+                </ul>
+            </div>
+
+            <hr class="separator" />
+
+        </div>
+    </aside>
+
+
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="main-header " id="header">
+            <nav class="navbar navbar-static-top navbar-expand-lg">
+                <!-- Sidebar toggle button -->
+                <button id="sidebar-toggler" class="sidebar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <!-- search form -->
+                <div class="search-form d-none d-lg-inline-block">
+                    <div class="input-group">
+                        <button type="button" name="search" id="search-btn" class="btn btn-flat">
+                            <i class="mdi mdi-magnify"></i>
+                        </button>
+                        <input type="text" name="query" id="search-input" class="form-control"
+                               placeholder="'button', 'chart' etc." autofocus autocomplete="off"/>
+                    </div>
+                    <div id="search-results-container">
+                        <ul id="search-results"></ul>
+                    </div>
+                </div>
+
+                <div class="navbar-right ">
+                    <ul class="nav navbar-nav">
+                        <!-- Github Link Button -->
+                        <li class="github-link mr-3">
+                            <a class="btn btn-outline-secondary btn-sm"
+                               href="https://github.com/tafcoder/sleek-dashboard"
+                               target="_blank">
+                                <span class="d-none d-md-inline-block mr-2">Source Code</span>
+                                <i class="mdi mdi-github-circle"></i>
+                            </a>
+
+                        </li>
+                        <li class="dropdown notifications-menu">
+                            <button class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="mdi mdi-bell-outline"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">You have 5 notifications</li>
+                                <li>
+                                    <a href="#">
+                                        <i class="mdi mdi-account-plus"></i> New user registered
+                                        <span class=" font-size-12 d-inline-block float-right"><i
+                                                class="mdi mdi-clock-outline"></i> 10
+                        AM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="mdi mdi-account-remove"></i> User deleted
+                                        <span class=" font-size-12 d-inline-block float-right"><i
+                                                class="mdi mdi-clock-outline"></i> 07
+                        AM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="mdi mdi-chart-areaspline"></i> Sales report is ready
+                                        <span class=" font-size-12 d-inline-block float-right"><i
+                                                class="mdi mdi-clock-outline"></i> 12
+                        PM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="mdi mdi-account-supervisor"></i> New client
+                                        <span class=" font-size-12 d-inline-block float-right"><i
+                                                class="mdi mdi-clock-outline"></i> 10
+                        AM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="mdi mdi-server-network-off"></i> Server overloaded
+                                        <span class=" font-size-12 d-inline-block float-right"><i
+                                                class="mdi mdi-clock-outline"></i> 05
+                        AM</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown-footer">
+                                    <a class="text-center" href="#"> View All </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- User Account -->
+                        <li class="dropdown user-menu">
+                            <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                <img src="../../static/assets/img/user/user.png" class="user-image" alt="User Image"/>
+                                <span class="d-none d-lg-inline-block">Abdus Salam</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <!-- User image -->
+                                <li class="dropdown-header">
+                                    <img src="../../static/assets/img/user/user.png" class="img-circle"
+                                         alt="User Image"/>
+                                    <div class="d-inline-block">
+                                        Abdus Salam <small class="pt-1">abdus@gmail.com</small>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a href="profile.html">
+                                        <i class="mdi mdi-account"></i> My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="email-inbox.html">
+                                        <i class="mdi mdi-email"></i> Message
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="mdi mdi-settings"></i> Account Setting </a>
+                                </li>
+
+                                <li class="dropdown-footer">
+                                    <a href="signin.html"> <i class="mdi mdi-logout"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+        </header>
+
+        <!--      <div>-->
+        <!--        <p>this is a ${test}</p>-->
+        <!--      </div>-->
+
+
+        <div class="content-wrapper">
+            <div class="content">
+
+
+                <div class="table_select_bar">
+
+                    <!--              下拉框-->
+                    <select id="table_selected">
+                        <script type="text/javascript">
+                            var data = eval("(" + '${tables}' + ")");
+                            for (var i = 0; i < data.length; i++) {
+                                $("#table_selected").append("<option value=" + data[i] + ">" + data[i] + "</option>");
+                            }
+                        </script>
+                    </select>
+                    <button id="table_select_button">选择这个表</button>
+                </div>
+                <p>表中最早的时间：${min_time};最晚的时间：${max_time}</p>
+                <script>//点击按钮来选择对应表
+                $(document).ready(function () {
+                    $("#table_select_button").click(function () {
+                        window.location.href='traffic_jam_' + $("#table_selected").val();
+                    });
+                });
+                </script>
+
+
+                <div class="select">
+                    <select id="day" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+
+                        <script>
+                            for (var i = 0; i <= 31; i++) {
+                                $(".select #day").append("<option value=" + i + ">" + i + "</option>");
+
+                            }
+                        </script>
+                    </select>|日
+                    <select id="week" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+                        <option value="0">null</option>
+                        <option value="1">显示本周</option>
+                    </select>|周
+                    <select id="month" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+                        <script>
+                            for (var i = 0; i <= 12; i++) {
+                                $(".select #month").append("<option value=" + i + ">" + i + "</option>");
+
+                            }
+                        </script>
+                    </select>|月
+                    <select id="year" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+                        <script>
+                            data = eval("(" + '${years}' + ")");
+                            for (var i = 0; i < data.length; i++) {
+                                $(".select #year").append("<option value=" + (data[i]) + ">" + (data[i]) + "</option>");
+                            }
+                        </script>
+                    </select>|年
+                    <select id="sectionname" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+                        <script>
+                            data = eval("(" + '${ids}' + ")");
+                            for (var i = 0; i < data.length; i++) {
+                                $(".select #sectionname").append("<option value=" + data[i] + ">" + data[i] + "</option>");
+                            }
+                        </script>
+                    </select>|sectionname
+                    <select id="roadid" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+                        <option value="0">0</option>
+                        <script>
+                            data = eval("(" + '${roadids}' + ")");
+                            for (var i = 0; i < data.length; i++) {
+                                $(".select #roadid").append("<option value=" + data[i] + ">" + data[i] + "</option>");
+                            }
+                        </script>
+                    </select>|roadid
+                    <button id="submit" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+                        |submit
+                    </button>
+                    <script  src="../../static/assets/LYWutils.js" charset="utf-8" type="text/javascript"></script>
+                    <script>
+                        $(document).ready(function () {
+                            $(".select #submit").click(function () {
+                                $.ajax({
+                                    url: "/ANLYS_NATURE_SECTION_getdata",
+                                    type: "GET",
+                                    data: {
+                                        "year": $(".select #year").val(),
+                                        "month": $(".select #month").val(),
+                                        "day": $(".select #day").val(),
+                                        "sectionname": $(".select #sectionname").val(),
+                                        "week": $(".select #week").val(),
+                                        "roadid": $(".select #roadid").val(),
+                                    },
+                                    success: function (data) {
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "isdxcd"))), Object.values(getMap(getAtt(data, "isdxcd"))), 'bar', 'isdxcd');
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "dxstartdate"))), Object.values(getMap(getAtt(data, "dxstartdate"))), 'bar', 'dxstartdate');
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "nmaxtraffic"))), Object.values(getMap(getAtt(data, "nmaxtraffic"))), 'bar', 'nmaxtraffic');
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "lanes"))), Object.values(getMap(getAtt(data, "lanes"))), 'bar', 'lanes');
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "width"))), Object.values(getMap(getAtt(data, "width"))), 'bar', 'width');
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "dxstarttime"))), Object.values(getMap(getAtt(data, "dxstarttime"))), 'bar', 'dxstarttime');
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "dxendtime"))), Object.values(getMap(getAtt(data, "dxendtime"))), 'bar', 'dxendtime');
+                                        create_chart('values', 'numbers', Object.keys(getMap(getAtt(data, "dxdirection"))), Object.values(getMap(getAtt(data, "dxdirection"))), 'bar', 'dxdirection');
+
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <!--        <form role="form" class="select" action="localhost:8080/traffic_jam" method="post">-->
+        <!--          <select name="select">-->
+        <!--            <option  value ="volvo">Volvo</option>-->
+        <!--            <option value ="saab">Saab</option>-->
+        <!--            <option value="opel">Opel</option>-->
+        <!--            <option value="audi">Audi</option>-->
+        <!--          </select>-->
+        <!--          <input type="submit" value="submit">-->
+        <!--        </form>-->
+
+        <!--      <p>asdfasdfasdf</p>-->
+        <!--      <p>${index_list}</p>-->
+        <!--        <script>-->
+        <!--          var a = return_list(eval("(" + '${index_id}' + ")"), "INSERT_TIME");-->
+        <!--          alert(a.toString());-->
+        <!--        </script>-->
+
+
+        <footer class="footer mt-auto">
+            <div class="copyright bg-white">
+                <p>
+                    &copy; <span id="copy-year">2019</span> Copyright Sleek Dashboard Bootstrap Template - More
+                    Templates <a
+                        href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a
+                        href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+                </p>
+            </div>
+            <script>
+                var d = new Date();
+                var year = d.getFullYear();
+                document.getElementById("copy-year").innerHTML = year;
+            </script>
+        </footer>
+
+
+    </div>
+
+</div>
+
+
+<script src="../../static/assets/plugins/jquery/jquery.min.js"></script>
+<script src="../../static/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/assets/plugins/toaster/toastr.min.js"></script>
+<script src="../../static/assets/plugins/slimscrollbar/jquery.slimscroll.min.js"></script>
+<script src="../../static/assets/plugins/charts/Chart.min.js"></script>
+<script src="../../static/assets/plugins/ladda/spin.min.js"></script>
+<script src="../../static/assets/plugins/ladda/ladda.min.js"></script>
+<script src="../../static/assets/plugins/jquery-mask-input/jquery.mask.min.js"></script>
+<script src="../../static/assets/plugins/select2/js/select2.min.js"></script>
+<script src="../../static/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="../../static/assets/plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
+<script src="../../static/assets/plugins/daterangepicker/moment.min.js"></script>
+<script src="../../static/assets/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../../static/assets/plugins/jekyll-search.min.js"></script>
+<script src="../../static/assets/js/sleek.js"></script>
+<script src="../../static/assets/js/chart.js"></script>
+<script src="../../static/assets/js/date-range.js"></script>
+<script src="../../static/assets/js/map.js"></script>
+<script src="../../static/assets/js/custom.js"></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+<script src="../../static/assets/js/echarts-gl.min.js"></script>
+<!--  <script>-->
+<!--    //柱状图-->
+<!--    var index = eval("(" + '${list}' + ")");-->
+<!--    var large = 0;-->
+<!--    var small = 0;-->
+<!--    var common = 0;-->
+<!--    for (var i = 0; i < index.length; i++) {-->
+<!--      large = large + index[i].LARGECOUNT;-->
+<!--      small = small + index[i].SMALLCOUNT;-->
+<!--      common = common + index[i].COMMCOUNT;-->
+<!--    }-->
+<!--    var dataset = [ large, small, common ];  //数据（表示矩形的宽度）-->
+
+<!--    var width = 300;  //画布的宽度-->
+<!--    var height = 300;   //画布的高度-->
+
+<!--    var svg = d3.select("#parallel-1-1")     //选择文档中的body元素-->
+<!--            .append("svg")          //添加一个svg元素-->
+<!--            .attr("width", width)       //设定宽度-->
+<!--            .attr("height", height);    //设定高度-->
+
+<!--    var rectHeight = 25;   //每个矩形所占的像素高度(包括空白)-->
+
+<!--    svg.selectAll("rect")-->
+<!--            .data(dataset)-->
+<!--            .enter()-->
+<!--            .append("rect")-->
+<!--            .attr("x",20)-->
+<!--            .attr("y",function(d,i){-->
+<!--              return i * rectHeight;-->
+<!--            })-->
+<!--            .attr("width",function(d){-->
+<!--              return d;-->
+<!--            })-->
+<!--            .attr("height",rectHeight-2)-->
+<!--            .attr("fill","steelblue");-->
+<!--    d3.select(".content-wrapper").selectAll("p").data(dataset).enter().text(d);-->
+<!--  </script>-->
+
+
+<!--  <script>-->
+<!--    var ww = 500;-->
+<!--    var hh = 100;-->
+<!--    var barPadding = 3;-->
+
+<!--    var dataset1 = [-->
+<!--      [5, 20], [480, 90], [250, 50], [100, 33], [330, 95],-->
+<!--      [410, 12], [475, 44], [25, 67], [85, 21], [220, 88]-->
+<!--    ];-->
+
+<!--    //Create SVG element-->
+<!--    var svg = d3.select("#3Dbar")-->
+<!--            .append("svg")-->
+<!--            .attr("width", ww)-->
+<!--            .attr("height", hh);-->
+
+<!--    svg.selectAll("circle")-->
+<!--            .data(dataset1)-->
+<!--            .enter()-->
+<!--            .append("circle")-->
+<!--            .attr("cx", function(d) {-->
+<!--              return d[0];-->
+<!--            })-->
+<!--            .attr("cy", function(d) {-->
+<!--              return d[1];-->
+<!--            })-->
+<!--            .attr("r", 5)-->
+<!--            .attr("fill", "rgb(0,0,255)");-->
+<!--  </script>-->
+
+
+</body>
+
+</html>

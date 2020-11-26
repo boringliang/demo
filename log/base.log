@@ -1,0 +1,40 @@
+2020-11-26 00:26:37,183 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 11332 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:26:37,378 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:26:37,386 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:26:47,215 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 12.131 seconds (JVM running for 16.298)
+2020-11-26 00:29:27,216 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 2408 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:29:27,220 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:29:27,221 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:29:36,630 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.045 seconds (JVM running for 19.292)
+2020-11-26 00:30:42,466 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 6648 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:30:42,470 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:30:42,471 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:30:50,977 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 8.93 seconds (JVM running for 14.101)
+2020-11-26 00:36:03,484 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 12972 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:36:03,488 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:36:03,489 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:36:12,208 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.233 seconds (JVM running for 14.459)
+2020-11-26 00:39:39,845 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 12072 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:39:39,849 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:39:39,850 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:39:48,781 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.43 seconds (JVM running for 13.146)
+2020-11-26 00:42:51,465 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 13960 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:42:51,468 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:42:51,469 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:43:00,238 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.221 seconds (JVM running for 14.033)
+2020-11-26 00:49:13,061 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 808 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:49:13,065 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:49:13,066 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:49:21,588 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 8.953 seconds (JVM running for 13.838)
+2020-11-26 00:50:38,929 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 8556 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:50:38,934 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:50:38,935 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:50:48,110 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.716 seconds (JVM running for 15.767)
+2020-11-26 00:54:22,097 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 4980 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:54:22,101 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:54:22,102 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:54:31,177 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.583 seconds (JVM running for 15.655)
+2020-11-26 00:56:42,968 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 4452 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-26 00:56:42,975 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-26 00:56:42,977 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-26 00:57:01,477 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 19.079 seconds (JVM running for 22.552)
