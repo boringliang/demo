@@ -603,6 +603,7 @@
                                     "time_range2": timeSlide.formatTooltip(timeSlide.value[1]),
                                 },
                                 success: function(data) {
+                                    console.log(data);
                                     // var WFDDs = data["WFDDs"];
                                     // var wfdds = new Array();
                                     // for (var i = 0; i < WFDDs.length; i++) {
@@ -613,11 +614,23 @@
                                     // }
                                     selections.options = [];
                                     // selections.options = wfdds;
-                                    selections.options = data.map(d => d.wfdd);
-                                    selections.options.push({
-                                        value: 'all',
-                                        label: '全选'
-                                    });
+                                    var temp = new Array();
+                                    for (var i = 0; i < data.length; i++) {
+                                        if (temp.indexOf(data[i].wfdd) === -1) {
+                                            temp.push(data[i].wfdd);
+                                        }
+                                    }
+                                    console.log(temp);
+                                    var tempt = new Array();
+                                    for (var i = 0; i < temp.length; i++) {
+                                        var a = new Object();
+                                        a.value = temp[i];
+                                        a.label = temp[i];
+                                        tempt.push(a);
+                                    }
+                                    tempt.unshift({value: 'all', label: '全选'});
+                                    console.log(tempt);
+                                    selections.options = tempt;
                                     // datas = getObject(data);
                                     datas = data;
                                     links = new Array();
@@ -1091,22 +1104,7 @@
                 var MainSelections = {
                     data() {
                         return {
-                            options: [{
-                                value: '选项1',
-                                label: '黄金糕'
-                            }, {
-                                value: '选项2',
-                                label: '双皮奶'
-                            }, {
-                                value: '选项3',
-                                label: '蚵仔煎'
-                            }, {
-                                value: '选项4',
-                                label: '龙须面'
-                            }, {
-                                value: '选项5',
-                                label: '北京烤鸭'
-                            }],
+                            options: [],
                             value: []
                         }
                     },
@@ -1269,7 +1267,12 @@
                                 },
                                 success: function(data) {
                                     // var WFDDs = data["WFDDs"];
-                                    var WFDDs = data.map(d => d.wfdd);
+                                    var WFDDs = new Array();
+                                    for (var i = 0; i < data.length; i++) {
+                                        if (WFDDs.indexOf(data[i].wfdd) === -1) {
+                                            WFDDs.push(data[i].wfdd);
+                                        }
+                                    }
                                     var wfdds = new Array();
                                     for (var i = 0; i < WFDDs.length; i++) {
                                         var o = new Object();
@@ -1279,7 +1282,7 @@
                                     }
                                     selections.options = [];
                                     selections.options = wfdds;
-                                    selections.options.push({
+                                    selections.options.unshift({
                                         value: 'all',
                                         label: '全选'
                                     });

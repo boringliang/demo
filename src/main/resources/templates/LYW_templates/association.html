@@ -251,6 +251,10 @@
                             style="margin-left: 20px;"
                             placeholder="请选择违法地点">
                         <el-option
+                                :label="all"
+                                :value="all">
+                        </el-option>
+                        <el-option
                                 v-for="item in options"
                                 :key="item"
                                 :label="item"
@@ -274,7 +278,7 @@
                         </el-option>
                     </el-select>
                 </template>
-                <el-button id="button" @click="clc">提交</el-button>
+                <el-button id="button" :loading="loading" @click="clc">提交</el-button>
             </div>
             <div>
                 <template id="rules">
@@ -344,7 +348,8 @@
                     data() {
                         return {
                             options: wfdds,
-                            value: []
+                            value: [],
+                            all: 'all',
                         }
                     },
                     watch: {
@@ -424,8 +429,12 @@
 
                 var button = new Vue({
                     el: "#button",
+                    data: {
+                        loading: false
+                    },
                     methods: {
                         clc: function() {
+                            // this.loading = true;
                             $.ajax({
                                 url: "association_ajax",
                                 type: "POST",
@@ -434,7 +443,7 @@
                                     "time2": calendar.value[1],
                                     "time_range1": timeSlide.formatTooltip(timeSlide.value[0]),
                                     "time_range2": timeSlide.formatTooltip(timeSlide.value[1]),
-                                    "wfdds": wfddSelections.value.toString(),
+                                    "wfdds": wfddSelections.value.indexOf('all') !== -1 ? 'all' : wfddSelections.value.toString(),
                                     "support": supportSlide.value/100,
                                     "confidence": confidenceSlide.value/100,
                                     "num_rules": num_rules.value,
@@ -442,6 +451,7 @@
                                 },
                                 success: function(data) {
                                     rules.value = data;
+                                    // this.loading = false;
                                 }
                             })
                         }

@@ -56,7 +56,7 @@ public class CodeGenerator {
         dsc.setDriverName("oracle.jdbc.OracleDriver");
         dsc.setUsername("sys as sysdba");
         dsc.setPassword("123");
-        dsc.setSchemaName("LRX");//当使用oracle数据库的时候这里用来填oracle的表的用户
+        dsc.setSchemaName("SYS");//当使用oracle数据库的时候这里用来填oracle的表的用户
         mpg.setDataSource(dsc);
 
         // 包配置

@@ -109,7 +109,7 @@ public class VioViolationController {
 //        List<VioViolation> res = vioViolationMapper.selectList(queryWrapper.inSql("WFBH", sqll).last(" and rownum < 3"));
 //        List<VioViolation> res = vioViolationMapper.selectList(queryWrapper.last("where WFBH in (" + sqll + ")" + " and rownum < 3"));
         List<VioViolation> res = vioViolationMapper.selectList(queryWrapper.between("WFSJ", aa, bb)
-        .between("TO_CHAR(WFSJ)", date_format(c), date_format(d))
+        .between("TO_CHAR(WFSJ, 'hh24:mi:ss')", date_format(c), date_format(d))
         .last(" and rownum < 100"));
         return res;
     }
