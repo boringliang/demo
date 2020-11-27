@@ -603,7 +603,6 @@
                                     "time_range2": timeSlide.formatTooltip(timeSlide.value[1]),
                                 },
                                 success: function(data) {
-                                    console.log(data);
                                     // var WFDDs = data["WFDDs"];
                                     // var wfdds = new Array();
                                     // for (var i = 0; i < WFDDs.length; i++) {
@@ -620,7 +619,6 @@
                                             temp.push(data[i].wfdd);
                                         }
                                     }
-                                    console.log(temp);
                                     var tempt = new Array();
                                     for (var i = 0; i < temp.length; i++) {
                                         var a = new Object();
@@ -629,7 +627,6 @@
                                         tempt.push(a);
                                     }
                                     tempt.unshift({value: 'all', label: '全选'});
-                                    console.log(tempt);
                                     selections.options = tempt;
                                     // datas = getObject(data);
                                     datas = data;
@@ -880,6 +877,7 @@
                                     });
                                 }
                             })
+
                         }
                     }
                 };

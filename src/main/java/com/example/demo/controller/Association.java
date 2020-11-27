@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 
 
 @Controller
-public class association {
+public class Association {
     @Autowired(required = false)
     private VioViolationMapper vioViolationMapper;
     @Autowired(required = false)

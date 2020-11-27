@@ -286,31 +286,40 @@
                             :data="value"
                             style="width: 100%">
                         <el-table-column
+                                sortable
                                 prop="premise"
                                 label="先决条件">
                         </el-table-column>
                         <el-table-column
+                                sortable
                                 prop="consequence"
                                 label="结果">
                         </el-table-column>
                         <el-table-column
+                                sortable
                                 prop="confidence"
                                 label="置信度">
                         </el-table-column>
                         <el-table-column
+                                sortable
                                 prop="lift"
                                 label="提升度">
                         </el-table-column>
                         <el-table-column
+                                sortable
                                 prop="leverage"
                                 label="杠杆率">
                         </el-table-column>
                         <el-table-column
+                                sortable
                                 prop="conviction"
                                 label="确信度">
                         </el-table-column>
                     </el-table>
                 </template>
+                <div id="graph" style="height: 500px; width: 100%">
+
+                </div>
             </div>
 
             <script>
@@ -451,7 +460,58 @@
                                 },
                                 success: function(data) {
                                     rules.value = data;
-                                    // this.loading = false;
+
+                                    var links = new Array();
+                                    var temp = new Array();
+                                    for (var i = 0; i < data.length; i++) {
+                                        if (temp.indexOf(data[i].premise === -1)) {
+                                            temp.push(data[i].premise);
+                                        }
+                                        if (temp.indexOf(data[i].consequence === -1)) {
+                                            temp.push(data[i].consequence);
+                                        }
+                                        links.push({
+                                            source: data[i].premise,
+                                            target: data[i].consequence,
+                                            name: data[i].premise + '->' + data[i].consequence,
+                                        })
+                                    }
+                                    temp = Array.from(new Set(temp));
+                                    var datas = temp.map(function(a){
+                                        var o = new Object();
+                                        o.name = a;
+                                        o.value = 20;
+                                        return o;
+                                    });
+                                    var myChart = echarts.init(
+                                        document.getElementById('graph')
+                                    )
+                                    var option = {
+                                        tooltip: {
+                                            show: true,
+                                            trigger: 'item',
+                                            formatter(params) {
+                                                return params.data.name;
+                                            }
+                                        },
+                                        series: [{
+                                            type: 'graph',
+                                            layout: 'force',
+                                            roam: true,
+                                            symbolSize: (value, params) => {
+                                                return value;
+                                            },
+                                            draggable: true,
+                                            data: datas,
+                                            force: {
+                                                edgeLength: 200,
+                                                repulsion: 300,
+                                                // gravity: 0.1
+                                            },
+                                            links: links,
+                                        }]
+                                    };
+                                    myChart.setOption(option);
                                 }
                             })
                         }
