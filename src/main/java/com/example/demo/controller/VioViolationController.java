@@ -27,6 +27,8 @@ import java.util.*;
 import weka.associations.Apriori;
 import weka.associations.AssociationRule;
 import weka.clusterers.EM;
+import weka.clusterers.HierarchicalClusterer;
+import weka.clusterers.SimpleKMeans;
 import weka.core.Attribute;
 import weka.core.DenseInstance;
 import weka.core.Instance;
@@ -189,22 +191,19 @@ public class VioViolationController {
             Instance instance = new DenseInstance(4);
             instance.setValue(attributes.get(0), labelss.get(random.nextInt(1)));
             instance.setValue(attributes.get(1), labels.get(random.nextInt(1)));
-            instance.setValue(attributes.get(2), labelssss.get(random.nextInt(6)));
-            instance.setValue(attributes.get(3), labels.get(random.nextInt(6)));
+            instance.setValue(attributes.get(2), labelssss.get(random.nextInt(5)));
+            instance.setValue(attributes.get(3), labels.get(random.nextInt(5)));
             instance.setDataset(instances);
             instances.add(instance);
         }
-//            EM clusterer = new EM();
-//            clusterer.setOptions(new String[] {"2"});
-//        SimpleKMeans clusterer = new SimpleKMeans();
-//        clusterer.buildClusterer(instances);
-//            System.out.println(clusterer.clusterPriors());
-//        System.out.println(clusterer.getNumClusters());
-//        System.out.println("--------------------");
-//        System.out.println(clusterer.toString());
-//        for (weka.core.Instance i : instances) {
-//            System.out.println(clusterer.clusterInstance(i));
-//        }
+        SimpleKMeans clusterer = new SimpleKMeans();
+        clusterer.buildClusterer(instances);
+        System.out.println(clusterer.getNumClusters());
+        System.out.println("--------------------");
+        System.out.println(clusterer.toString());
+        for (weka.core.Instance i : instances) {
+            System.out.println(clusterer.clusterInstance(i));
+        }
         Apriori fpGrowth = new Apriori();
 //        FPGrowth fpGrowth = new FPGrowth();
         fpGrowth.buildAssociations(instances);
@@ -226,12 +225,15 @@ public class VioViolationController {
         ArrayList<Attribute> attributes = new ArrayList<>();
         attributes.add(new Attribute("first"));
         attributes.add(new Attribute("second"));
+        List<String> temp = Arrays.asList(new String[] {"first", "sectond"});
+        attributes.add(new Attribute("string", temp));
         Instances instances = new Instances("testcluster", attributes, 0);
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
-            Instance instance = new DenseInstance(2);
+            Instance instance = new DenseInstance(3);
             instance.setValue(0, random.nextDouble());
             instance.setValue(1, random.nextDouble());
+            instance.setValue(2, temp.get(random.nextInt(1)));
             instance.setDataset(instances);
             instances.add(instance);
         }

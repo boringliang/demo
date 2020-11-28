@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import weka.associations.Apriori;
 import weka.associations.AssociationRule;
 import weka.associations.FPGrowth;
+import weka.clusterers.HierarchicalClusterer;
 import weka.core.Attribute;
 import weka.core.DenseInstance;
 import weka.core.Instance;
@@ -49,6 +50,8 @@ public class Association {
         }
         return String.join(":", l);
     }
+
+
 
 
     @ResponseBody
@@ -337,8 +340,10 @@ public class Association {
             jsonArray.add(jsonObject);
         }
         System.out.println("data transfered.");
+
         return jsonArray;
     }
+
 
 
 }
