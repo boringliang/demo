@@ -3,8 +3,10 @@ package com.example.demo.controller;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.demo.entity.AcdFile;
 import com.example.demo.entity.VioCoderoad;
 import com.example.demo.entity.VioViolation;
+import com.example.demo.mapper.AcdFileMapper;
 import com.example.demo.mapper.VioCoderoadMapper;
 import com.example.demo.mapper.VioViolationMapper;
 import org.apache.jena.base.Sys;
@@ -35,6 +37,8 @@ public class Association {
     private VioViolationMapper vioViolationMapper;
     @Autowired(required = false)
     private VioCoderoadMapper vioCoderoadMapper;
+    @Autowired(required = false)
+    private AcdFileMapper acdFileMapper;
 
     private String date_format(String date) {
         String[] l = date.split(":");
@@ -109,7 +113,7 @@ public class Association {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time1 = sdf.format(aa);
         String time2 = sdf.format(bb);
-        String wfdds_string = request.getParameter("wfdds");
+        String wfdds_string = request.getParameter("lhs");
         String fields_string = request.getParameter("fields");
         List<String> fields = Arrays.asList(fields_string.split(","));
         List<VioViolation> res;
@@ -229,6 +233,111 @@ public class Association {
 //        "hphm", "jdcsyr", "syxz", "jtfs", "xzqh", "dllx", "wfdd", "lddm", "wfxw", "wfjfs", "fkje",
 //        "fxjg", "cljg", "jkbj", "sgdj"});
 //        List<String> out = Arrays.asList(new String[] {"jszh"});
+    }
+
+    @ResponseBody
+    @RequestMapping("association_acd")
+    ModelAndView association_acd() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/LYW_templates/association_acd");
+        QueryWrapper<AcdFile> queryWrapper = new QueryWrapper<>();
+        List<AcdFile> res = acdFileMapper.selectList(queryWrapper.select("distinct lh"));
+        List<String> lhs = res.stream().map(r -> r.getLh()).collect(Collectors.toList());
+        modelAndView.addObject("lhs", lhs.toString());
+        return modelAndView;
+    }
+
+    @ResponseBody
+    @RequestMapping("association_acd_ajax")
+    JSONArray association_acd_ajax(HttpServletRequest request) throws Exception {
+        Map<String, String> table= new HashMap<>();
+        table.put("tq", "天气");
+        table.put("njd", "能见度");
+        table.put("xc", "现场");
+        table.put("zmtj", "照明条件");
+        table.put("dx", "地形");
+        table.put("fhsslx", "防护设施类型");
+        table.put("dlwlgl", "道路物理隔离");
+        table.put("sglx", "事故类型");
+        table.put("sgccyy", "事故初查原因");
+        table.put("ccyyfl", "事故初查原因分类");
+        table.put("sgrdyy", "事故认定原因");
+        table.put("rdyyfl", "事故认定原因分类");
+        table.put("sgxt", "事故形态");
+        table.put("badw", "办案单位");
+        table.put("fsjg", "发送机关");
+        table.put("lh", "路号");
+        //得到数据
+        QueryWrapper<AcdFile> queryWrapper = new QueryWrapper<>();
+        String a = request.getParameter("time1");
+        String b = request.getParameter("time2");
+        String c = request.getParameter("time_range1");
+        String d = request.getParameter("time_range2");
+        Date aa = new Date(a);
+        Date bb = new Date(b);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String time1 = sdf.format(aa);
+        String time2 = sdf.format(bb);
+        String lhs_string = request.getParameter("lhs");
+        String fields_string = request.getParameter("fields");
+        List<String> fields = Arrays.asList(fields_string.split(","));
+        List<AcdFile> res;
+        if (lhs_string.equals("all")) {
+            res = acdFileMapper.selectList(queryWrapper.between("SGFSSJ", aa, bb)
+                    .between("TO_CHAR(SGFSSJ, 'hh24:mi:ss')", date_format(c), date_format(d)));
+        }
+        else {
+            List<String> lhs = Arrays.asList(lhs_string.split(","));
+            res = acdFileMapper.selectList(queryWrapper.between("SGFSSJ", aa, bb)
+                    .between("TO_CHAR(SGFSSJ, 'hh24:mi:ss')", date_format(c), date_format(d))
+                    .in("LH", lhs));
+        }
+
+        //设置数据集的属性
+        ArrayList<Attribute> attributes = new ArrayList<>();
+        for (String field : fields) {
+            Set<String> s = new HashSet<>();
+            for (AcdFile v : res) {
+                JSONObject jsonObject = (JSONObject) JSONObject.toJSON(v);
+                s.add((String) jsonObject.getString(field));
+            }
+            List<String> values = new ArrayList<>(s);
+            List<String> temp = values.stream().map(o -> o == null ? "none" : o).collect(Collectors.toList());
+            attributes.add(new Attribute(table.get(field), temp));
+        }
+        //构造数据集
+        Instances instances = new Instances("AcdFile", attributes, 0);
+        for (AcdFile acdFile : res) {
+            Instance instance = new DenseInstance(fields.size());
+            for (int i = 0; i < fields.size(); i++) {
+                JSONObject jsonObject = (JSONObject) JSONObject.toJSON(acdFile);
+                instance.setValue(attributes.get(i), jsonObject.getString(fields.get(i)) == null ? "none" : jsonObject.getString(fields.get(i)));
+            }
+            instance.setDataset(instances);
+            instances.add(instance);
+        }
+        //关联规则算法
+        Apriori apriori = new Apriori();
+        apriori.setNumRules(Integer.parseInt(request.getParameter("num_rules")));
+        apriori.setMinMetric(Double.parseDouble(request.getParameter("confidence")));
+        apriori.setLowerBoundMinSupport(Double.parseDouble(request.getParameter("support")));
+        apriori.buildAssociations(instances);
+        System.out.println(apriori.getAssociationRules().getNumRules());
+        List<AssociationRule> rules = apriori.getAssociationRules().getRules();
+        JSONArray jsonArray = new JSONArray();
+        for (AssociationRule associationRule : rules) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("premise", associationRule.getPremise().toString());
+            jsonObject.put("consequence", associationRule.getConsequence().toString());
+            double[] metrics = associationRule.getMetricValuesForRule();
+            jsonObject.put("confidence", metrics[0]);
+            jsonObject.put("lift", metrics[1]);
+            jsonObject.put("leverage", metrics[2]);
+            jsonObject.put("conviction", metrics[3]);
+            jsonArray.add(jsonObject);
+        }
+        System.out.println("data transfered.");
+        return jsonArray;
     }
 
 

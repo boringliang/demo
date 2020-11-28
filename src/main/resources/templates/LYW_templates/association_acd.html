@@ -242,14 +242,14 @@
                         </el-date-picker>
                     </div>
                 </template>
-                <template id="wfdd_selections" style="float: left">
+                <template id="lh_selections" style="float: left">
                     <el-select
                             v-model="value"
                             clearable
                             multiple
                             collapse-tags
                             style="margin-left: 20px;"
-                            placeholder="请选择违法地点">
+                            placeholder="请选择路号">
                         <el-option
                                 :label="all"
                                 :value="all">
@@ -323,27 +323,24 @@
             </div>
 
             <script>
-                var wfdds = eval( "(" + '${wfdds}' + ")" );
+                var lhs = eval( "(" + '${lhs}' + ")" );
                 var fields = new Array();
-                fields.push({key:'准驾车型', value:'zjcx'})
-                fields.push({key:'当事人', value:'dsr'})
-                fields.push({key:'车辆分类', value:'clfl'})
-                fields.push({key:'号牌种类', value:'hpzl'})
-                fields.push({key:'号牌号码', value:'hphm'})
-                fields.push({key:'机动车所有人', value:'jdcsyr'})
-                fields.push({key:'使用性质', value:'syxz'})
-                fields.push({key:'交通方式', value:'jtfs'})
-                fields.push({key:'行政区划', value:'xzqh'})
-                fields.push({key:'道路类型', value:'dllx'})
-                fields.push({key:'违法地点', value:'wfdd'})
-                fields.push({key:'路段代码（或地点米数）', value:'lddm'})
-                fields.push({key:'违法行为', value:'wfxw'})
-                fields.push({key:'违法记分数', value:'wfjfs'})
-                fields.push({key:'罚款金额', value:'fkje'})
-                fields.push({key:'发现机关', value:'fxjg'})
-                fields.push({key:'处理机关', value:'cljg'})
-                fields.push({key:'交款标记', value:'jkbj'})
-                fields.push({key:'事故等级', value:'sgdj'})
+                fields.push({key:"天气", value:"tq"});
+                fields.push({key:"能见度", value:"njd"});
+                fields.push({key:"现场", value:"xc"});
+                fields.push({key:"照明条件", value:"zmtj"});
+                fields.push({key:"地形", value:"dx"});
+                fields.push({key:"防护设施类型", value:"fhsslx"});
+                fields.push({key:"道路物理隔离", value:"dlwlgl"});
+                fields.push({key:"事故类型", value:"sglx"});
+                fields.push({key:"事故初查原因", value:"sgccyy"});
+                fields.push({key:"事故初查原因分类", value:"ccyyfl"});
+                fields.push({key:"事故认定原因", value:"sgrdyy"});
+                fields.push({key:"事故认定原因分类", value:"rdyyfl"});
+                fields.push({key:"事故形态", value:"sgxt"});
+                fields.push({key:"办案单位", value:"badw"});
+                fields.push({key:"发送机关", value:"fsjg"});
+                fields.push({key:"路号", value:"lh"});
 
                 var fieldSelections = new Vue({
                     el: "#field_selections",
@@ -356,7 +353,7 @@
                 var MainSelections = {
                     data() {
                         return {
-                            options: wfdds,
+                            options: lhs,
                             value: [],
                             all: 'all',
                         }
@@ -366,7 +363,7 @@
                     }
                 }
                 var CtorSelections = Vue.extend(MainSelections)
-                var wfddSelections = new CtorSelections().$mount('#wfdd_selections')
+                var lhsSelections = new CtorSelections().$mount('#lh_selections')
 
                 var MainCalendar = {
                     data() {
@@ -445,14 +442,14 @@
                         clc: function() {
                             // this.loading = true;
                             $.ajax({
-                                url: "association_ajax",
+                                url: "association_acd_ajax",
                                 type: "POST",
                                 data: {
                                     "time1": calendar.value[0],
                                     "time2": calendar.value[1],
                                     "time_range1": timeSlide.formatTooltip(timeSlide.value[0]),
                                     "time_range2": timeSlide.formatTooltip(timeSlide.value[1]),
-                                    "wfdds": wfddSelections.value.indexOf('all') !== -1 ? 'all' : wfddSelections.value.toString(),
+                                    "lhs": lhsSelections.value.indexOf('all') !== -1 ? 'all' : lhsSelections.value.toString(),
                                     "support": supportSlide.value/100,
                                     "confidence": confidenceSlide.value/100,
                                     "num_rules": num_rules.value,
