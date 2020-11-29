@@ -45,6 +45,45 @@
 
 
     <script src="../../static/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../../static/assets/js/lyw/sidebar.js"></script>
+    <style type="text/css">
+        table.gridtable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+        input[type="range"] {
+
+            width:600px;
+
+        }
+
+        p,
+        label {
+            font: 1rem 'Fira Sans', sans-serif;
+        }
+
+        input {
+            margin: .4rem;
+        }
+    </style>
 </head>
 
 
@@ -63,216 +102,7 @@
 ——— LEFT SIDEBAR WITH FOOTER
 =====================================
 -->
-    <aside class="left-sidebar bg-sidebar">
-        <div id="sidebar" class="sidebar sidebar-with-footer">
-            <!-- Aplication Brand -->
-            <div class="app-brand">
-                <a href="/index.html">
-                    <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
-                         width="30" height="33" viewBox="0 0 30 33">
-                        <g fill="none" fill-rule="evenodd">
-                            <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
-                            <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
-                        </g>
-                    </svg>
-                    <span class="brand-name">交管决策指挥中心</span>
-                </a>
-            </div>
-            <!-- begin sidebar scrollbar -->
-            <div class="sidebar-scrollbar">
 
-                <!-- sidebar menu -->
-                <ul class="nav sidebar-inner" id="sidebar-menu">
-                    <!--交通事件特征分析-->
-                    <li class="has-sub expand">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#trafficeventfeature" aria-expanded="false" aria-controls="dashboard">
-                            <i class="mdi mdi-view-dashboard-outline"></i>
-                            <span class="nav-text">交通事件特征分析</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse show" id="trafficeventfeature" data-parent="#sidebar-menu">
-                            <div class="sub-menu">
-                                <li>
-                                    <a class="sidenav-item-link" href="accident">
-                                        <span class="nav-text">交通事故</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="/weifa">
-                                        <span class="nav-text">交通违法</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="/guihua">
-                                        <span class="nav-text">交通规划</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="/traffic_jam_INDEX_ROAD_INDEX">
-                                        <span class="nav-text">交通拥堵</span>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                                    <a class="sidenav-item-link" href="/tufaevent">
-                                        <span class="nav-text">突发事件</span>
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a class="sidenav-item-link" href="/yuan">
-                                        <span class="nav-text">交通预案</span>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                                    <a class="sidenav-item-link" href="/weather">
-                                        <span class="nav-text">气象影响</span>
-                                    </a>
-                                </li> -->
-                                <!-- <li>
-                                    <a class="sidenav-item-link" href="/volum">
-                                        <span class="nav-text">交通流量</span>
-                                    </a>
-                                </li> -->
-                            </div>
-                        </ul>
-                    </li>
-
-                    <!--情报数据展示-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#qbsjzs"
-                           aria-expanded="false" aria-controls="icons">
-                            <i class="mdi mdi-book-open-page-variant"></i>
-                            <span class="nav-text">情报数据展示</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="qbsjzs">
-                            <div class="sub-menu">
-                                <li>
-                                    <a href="/intelligen">情报数据展示</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <!--事件研判分析-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#shijianyanpan" aria-expanded="false" aria-controls="icons">
-                            <i class="mdi mdi-chart-pie"></i>
-                            <span class="nav-text">事件研判分析</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="shijianyanpan">
-                            <div class="sub-menu">
-                                <li>
-                                    <a href="/Traffic_Accident">全市事故统计</a>
-                                </li>
-                                <li>
-                                    <a href="/Illegal">全市违法统计</a>
-                                </li>
-                                <li>
-                                    <a href="/showVideo">视频信息</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <!--知识图谱-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
-                            <i class="mdi mdi-image-filter-none"></i>
-                            <span class="nav-text">知识图谱</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
-                            <div class="sub-menu">
-                                <li class="has-sub">
-                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                       data-target="#components" aria-expanded="false" aria-controls="components">
-                                        <span class="nav-text">知识图谱展示</span> <b class="caret"></b>
-                                    </a>
-                                </li>
-                                <li class="has-sub">
-                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                       data-target="#icons" aria-expanded="false" aria-controls="icons">
-                                        <span class="nav-text">知识图谱应用场景</span> <b class="caret"></b>
-                                    </a>
-                                    <ul class="collapse" id="icons">
-                                        <div class="sub-menu">
-                                            <li>
-                                                <a href="../material-icon.html">拥堵预测</a>
-                                            </li>
-                                            <li>
-                                                <a href="../flag-icon.html">拥堵蔓延分析</a>
-                                            </li>
-                                        </div>
-                                    </ul>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-
-                    <!--事件图谱-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#charts" aria-expanded="false" aria-controls="charts">
-                            <i class="mdi mdi-folder-multiple-outline"></i>
-                            <span class="nav-text">事件图谱</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="charts" data-parent="#sidebar-menu">
-                            <div class="sub-menu">
-                                <li>
-                                    <a class="sidenav-item-link" href="Police_case">
-                                        <span class="nav-text">事件图谱展示</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="eventgraph_appilication">
-                                        <span class="nav-text">事件图谱应用场景</span>
-                                    </a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <!--视频理解-->
-                    <!-- <li  class="has-sub" >
-            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#pages"
-               aria-expanded="false" aria-controls="pages">
-              <i class="mdi mdi-image-filter-none"></i>
-              <span class="nav-text">视频理解</span> <b class="caret"></b>
-            </a>
-            <ul  class="collapse"  id="pages"
-                 data-parent="#sidebar-menu">
-              <div class="sub-menu">
-                <li >
-                  <a class="sidenav-item-link" href="../user-profile.html">
-                    <span class="nav-text">视频属性概要展示</span>
-                  </a>
-                </li>
-              </div>
-            </ul>
-          </li> -->
-
-                    <!--对话系统-->
-                    <!-- <li  class="has-sub" >
-            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#documentation"
-               aria-expanded="false" aria-controls="documentation">
-              <i class="mdi mdi-book-open-page-variant"></i>
-              <span class="nav-text">对话系统</span> <b class="caret"></b>
-            </a>
-            <ul  class="collapse"  id="documentation"
-                 data-parent="#sidebar-menu">
-              <div class="sub-menu">
-                <li >
-                  <a class="sidenav-item-link" href="rtl.html">
-                    <span class="nav-text">对话场景展示</span>
-                  </a>
-                </li>
-              </div>
-            </ul>
-          </li> -->
-                </ul>
-            </div>
-
-            <hr class="separator" />
-
-        </div>
-    </aside>
 
     <div class="page-wrapper">
         <!-- Header -->
@@ -493,7 +323,7 @@
 
                 <div id="table_selected" >
                     <label>违法类：选择这个表：</label>
-                    <select id="accident_table_selected">
+                    <select id="accident_table_selected" onchange=changebox()>
                         <script type="text/javascript">
                             // var tablecontent = eval("(" + '${tables}' + ")");
                             var tablecontent =eval('${tables}');;
@@ -507,32 +337,80 @@
 
 
 
-                <div id="checkboxdiv">
+                <div id="checkboxdiv" style="display:none">
+                    <label>时间信息：</label>
+                    <input type="checkbox" name="check" value="违法时刻">事故发生时刻&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="月份">事故发生月份&nbsp;&nbsp;
+                    <br><label>地理信息：</label>
+                    <input type="checkbox" name="check" value="住所行政区划">住所行政区划&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="行政区划">行政区划&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="违法地点">违法地点&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="路口路段代码">路口路段代码&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="道路类型">道路类型&nbsp;&nbsp;
+                    <br><label>违法信息：</label>
+                    <input type="checkbox" name="check" value="决定书类别">决定书类别&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="交通方式">交通方式&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="违法行为">违法行为&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="事故等级">事故等级（空）&nbsp;&nbsp;
+                    <br>
+                    <input type="checkbox" name="check" value="违法记分数">违法记分数&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="发现机关">发现机关&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="发现机关名称">发现机关名称&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="处理机关">处理机关&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="处理机关名称">处理机关名称&nbsp;&nbsp;
+                    <label>人 信息：</label>
+                    <input type="checkbox" name="check" value="当事人">当事人&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="人员分类">人员分类&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="准驾车型">准驾车型&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="年龄">年龄&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="性别">性别&nbsp;&nbsp;
+                    <br>
+                    <input type="checkbox" name="check" value="驾驶人性质">驾驶人性质&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="处理对象标记 0-本地;1-本省外地市;2-外省">处理对象标记 0-本地;1-本省外地市;2-外省&nbsp;&nbsp;
+
+                    <label>车 信息：</label>
+                    <input type="checkbox" name="check" value="车辆分类">车辆分类&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="号牌种类">号牌种类&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="号牌号码">号牌号码&nbsp;&nbsp;
+                    <input type="checkbox" name="check" value="车辆用途">车辆用途&nbsp;&nbsp;
+
 
                 </div>
                 <script type="text/javascript">
-                    $.ajax({
-                        url:"/viorules/get_attribute",
-                        type:'post',
-                        data:{
-                            "table_selected":$("#accident_table_selected").val()
-                        },
-                        success:function(data){
-                            $("#checkboxdiv").empty()
-                            // alert(data)
-                            for(var i=0;i<data.length;i++ ){
-                                str= "<input type=\"checkbox\" name = \"check\" id=\""+data[i]+"\"value=\""+data[i]+"\">"+data[i]+"<br>"
 
-                                $("#checkboxdiv").append(str)
-                            }
+                    function changebox(){
+                        // $.ajax({
+                        //     url:"/viorules/get_attribute",
+                        //     type:'post',
+                        //     async:false,
+                        //     data:{
+                        //         "table_selected":$("#accident_table_selected").val()
+                        //     },
+                        //     success:function(data){
+                        //         $("#checkboxdiv").empty()
+                        //         for(var i=0;i<data.length;i++ ){
+                        //             str= "<input type=\"checkbox\" name = \"check\" id=\""+data[i]+"\"value=\""+data[i]+"\">"+data[i] +"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                        //             if((i+1)%5==0){
+                        //                 str=str+"<br/>"
+                        //             }
+                        //
+                        //
+                        //             $("#checkboxdiv").append(str)
+                        //         }
+                        //
+                        //
+                        //     }
+                        // })
+                        if ($("#accident_table_selected").val() == "VIO_VIOLATION") {
+                            $("#checkboxdiv").show()
 
+                    }
+                    }
 
-                        }
-                    })
                 </script>
 
                 <label>support:</label>
-                <input id="support_range" type="range" name="support" min="0" max="1" value="0.02"step="0.01" oninput="change()" onchange="change()">
+                <input id="support_range" type="range" name="support" min="0" max="0.6" value="0"step="0.000001" oninput="change()" onchange="change()">
                 <span id="support_value">0</span>
                 <script type='text/javascript'>
                     function change() {
@@ -552,6 +430,23 @@
                         document.getElementById('value').innerHTML = value;
                     }
                 </script>
+
+                </br>
+
+                <p>选择算法:</p>
+
+                <div>
+                    <input type="radio" id="apriori" name="algrithom" value="apriori">
+                    <label for="apriori">apriori</label>
+
+                    <input type="radio" id="apriori_hash" name="algrithom" value="apriori_hash">
+                    <label for="apriori_hash">apriori_hash</label>
+
+                    <input type="radio" id="fpgrowth" name="algrithom" value="fpgrowth">
+                    <label for="fpgrowth">fpgrowth</label>
+
+                    <input type="radio" id="growth_plus" name="algrithom" value="fpgrowth_plus">
+                    <label for="growth_plus">fpgrowth_plus</label>
                 <button id="submit" onclick="get_attribute()">submit</button>
 
 
@@ -573,6 +468,15 @@
 
                             } //如果选中，将value添加到变量s中
                         }
+
+                        var radio = document.getElementsByName("algrithom");
+                        var algrithom='';
+                        for (i=0; i<radio.length; i++) {
+                            if (radio[i].checked) {
+                                alert(radio[i].value);
+                                algrithom=radio[i].value;
+                            }
+                        }
                         //那么现在来检测s的值就知道选中的复选框的值了
                         alert(s==''?'你还没有选择任何内容！':s);
 
@@ -583,11 +487,22 @@
                                 "choices":JSON.stringify(choices),
                                 "support":support_value,
                                 "confidence":confidence_value,
-                                "tablename":tablename
+                                "tablename":tablename,
+                                "algrithom":algrithom
                             },
                             type:"post",
                             success:function(data){
-                                alert(data)
+                                console.log(data);
+                                var html = "";
+                                for(var i =0;i<data.length;i=i+4){
+
+                                    html += "<tr> <td>" + data[i] + "</td> <td>"
+                                        +data[i+1]+ "</td> <td>"
+                                        +data[i+2]+ "</td> <td>"
+                                        +data[i+3]+ "</td> </tr>"
+
+                                }
+                                $("#rules").html(html)
 
                             }
 
@@ -597,11 +512,11 @@
 
 
 
-                <table align="center">
+                <table align="center" class="gridtable">
                     <tr>
                         <td>index  </td>
                         <td>confidence  </td>
-                        <td>sre  </td>
+                        <td>src  </td>
                         <td>target  </td>
 
 
@@ -632,12 +547,9 @@
                             success:function (data) {
                                 console.log(data);
                                 var html = "";
-                                for(var i =0;i<data.length;i = i+4){
+                                for(var i =0;i<data.length;i++){
 
-                                    html += "<tr> <td>" + data[i] + "</td> <td>"
-                                                        +data[i+1]+ "</td> <td>"
-                                                        +data[i+2]+ "</td> <td>"
-                                                        +data[i+3]+ "</td> </tr>"
+                                    html += "<tr> <td>" + data[i] + "</td> </tr>"
 
                                 }
                                 $("#rules").html(html)

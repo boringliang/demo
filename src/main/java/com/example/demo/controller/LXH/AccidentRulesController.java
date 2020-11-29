@@ -19,7 +19,7 @@ public class AccidentRulesController {
     @RequestMapping("test")
     public ModelAndView test(){
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("LXH/testtable");
+        mav.setViewName("/LXH/testtable");
         return mav;
 
     }
@@ -29,7 +29,7 @@ public class AccidentRulesController {
         ModelAndView mav = new ModelAndView();
         JSONArray tables_json_array = JSONArray.fromObject(AccidentTables.getTables());
         mav.addObject("tables", tables_json_array.toString());
-        mav.setViewName("LXH/accident_rules");
+        mav.setViewName("/LXH/accident_rules");
         return mav;
     }
 
@@ -42,7 +42,7 @@ public class AccidentRulesController {
 //        System.out.println(table_selected.getClass().getName());
 //        System.out.println(table_selected.equals("ACD_FILE"));
 //        Map<String, String> map = AccidentTables.getConlumns(table_selected);
-        Map<String, String> map = AccidentTables.getConlumns("ACD_FILE");
+        Map<String, String> map = AccidentTables.getConlumns(table_selected);
         List<String> columnChinese = new ArrayList<>();
         for (HashMap.Entry<String, String> entry : map.entrySet()) {
             columnChinese.add(entry.getKey());
@@ -56,8 +56,9 @@ public class AccidentRulesController {
         String obj = request.getParameter("choices");
         String support = request.getParameter("support");
         String confidence = request.getParameter("confidence");
-        String tablename = request.getParameter("tablename");
-        Map<String,String> map = AccidentTables.getConlumns("ACD_FILE");
+        String tablename = request.getParameter("tablename").toString();
+        String algrithom = request.getParameter("algrithom").toString();
+        Map<String,String> map = AccidentTables.getConlumns(tablename);
 
         JSONArray jsonArray = JSONArray.fromObject(obj);
         List<String> list = new ArrayList();
@@ -68,16 +69,12 @@ public class AccidentRulesController {
             list.add(column);
         }
         List<String> res = new ArrayList();
+        System.out.println(algrithom);
 
         Process proc;
         try {
 
-//            String[] args1 = new String[]{"python", "/Users/liuxuhui/PycharmProjects/data_mine/test1.py",list.toString(), support,confidence,tablename};
-            String[] args1 = new String[]{"python", "C:/Users/10356/Desktop/data_mine/test1.py",list.toString(), support,confidence,tablename};
-            System.out.println(list.toString());
-            System.out.println(support);
-            System.out.println(confidence);
-            System.out.println(tablename);
+            String[] args1 = new String[]{"python", "C:/Users/10356/Desktop/data_mine/test1.py",list.toString(), support,confidence,tablename,algrithom};
             proc = Runtime.getRuntime().exec(args1);
             //用输入输出流来截取结果
             BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
@@ -95,10 +92,6 @@ public class AccidentRulesController {
         }
 
         return res;
-
-
-
-
 
     }
 }

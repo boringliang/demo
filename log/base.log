@@ -1,116 +1,200 @@
-2020-11-28 10:41:05,466 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 10744 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 10:41:05,476 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 10:41:05,477 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 10:41:15,561 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.565 seconds (JVM running for 13.76)
-2020-11-28 10:41:44,348 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
-2020-11-28 10:41:44,373 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 10:41:45,374 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
-2020-11-28 10:41:47,968 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM ACD_FILE 
-2020-11-28 10:41:47,969 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 10:42:24,006 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 1460 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 10:42:24,010 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 10:42:24,011 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 10:42:33,030 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.442 seconds (JVM running for 12.248)
-2020-11-28 10:42:36,658 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 10:42:36,681 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 10:42:36,770 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 10:43:42,627 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 12432 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 10:43:42,631 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 10:43:42,632 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 10:43:51,511 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.31 seconds (JVM running for 12.234)
-2020-11-28 10:43:54,298 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 10:43:54,321 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 10:43:54,416 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 10:44:04,010 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 10:44:04,014 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 10:49:00,476 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 15504 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 10:49:00,481 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 10:49:00,483 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 10:49:09,683 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.675 seconds (JVM running for 12.828)
-2020-11-28 10:49:15,568 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 10:49:15,593 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 10:49:15,676 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 10:49:38,760 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 10:49:38,763 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 10:50:20,830 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ? AND WFDD IN (?,?,?,?)) 
-2020-11-28 10:50:20,833 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String), 40003(String), 40256(String), 10204(String), 30081(String)
-2020-11-28 10:50:28,846 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 15908
-2020-11-28 10:51:14,190 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 11552 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 10:51:14,194 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 10:51:14,195 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 10:51:23,586 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.83 seconds (JVM running for 12.662)
-2020-11-28 10:51:27,005 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 10:51:27,029 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 10:51:27,123 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 10:51:34,990 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 10:51:34,993 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 10:51:35,402 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
-2020-11-28 10:51:48,094 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 10:51:48,095 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 10:51:48,444 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
-2020-11-28 13:19:33,671 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 3416 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:19:33,675 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:19:33,676 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:19:42,683 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.43 seconds (JVM running for 12.595)
-2020-11-28 13:20:43,489 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 6764 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:20:43,492 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:20:43,493 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:20:52,358 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.288 seconds (JVM running for 12.085)
-2020-11-28 13:21:54,625 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 15068 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:21:54,629 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:21:54,630 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:22:04,090 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.892 seconds (JVM running for 12.589)
-2020-11-28 13:24:53,496 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 11732 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:24:53,504 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:24:53,505 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:25:02,430 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.392 seconds (JVM running for 12.301)
-2020-11-28 13:25:41,152 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 6660 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:25:41,156 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:25:41,157 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:25:50,125 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.401 seconds (JVM running for 12.205)
-2020-11-28 13:42:00,668 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 6908 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:42:00,673 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:42:00,674 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:42:10,467 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.238 seconds (JVM running for 12.639)
-2020-11-28 13:42:17,123 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
-2020-11-28 13:42:17,152 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 13:42:19,142 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
-2020-11-28 13:42:20,335 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 13:42:20,336 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 13:42:20,411 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 13:42:38,349 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 13:42:38,353 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 13:42:38,927 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
-2020-11-28 13:43:51,481 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 15756 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:43:51,486 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:43:51,488 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:44:01,837 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.87 seconds (JVM running for 14.48)
-2020-11-28 13:44:07,941 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 13:44:07,982 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 13:44:08,121 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 13:44:26,043 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 13:44:26,046 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 13:44:26,712 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
-2020-11-28 13:47:46,096 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 10092 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:47:46,099 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:47:46,100 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:47:55,170 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.577 seconds (JVM running for 12.278)
-2020-11-28 13:47:58,843 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 13:47:58,871 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 13:47:58,993 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 13:48:10,993 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 13:48:10,997 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 13:48:11,623 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
-2020-11-28 13:49:30,305 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 9984 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
-2020-11-28 13:49:30,309 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-2020-11-28 13:49:30,310 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
-2020-11-28 13:49:39,309 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.439 seconds (JVM running for 12.222)
-2020-11-28 13:49:42,828 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
-2020-11-28 13:49:42,861 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
-2020-11-28 13:49:43,003 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
-2020-11-28 13:49:59,236 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 13:49:59,240 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 13:49:59,817 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
-2020-11-28 14:16:21,416 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
-2020-11-28 14:16:21,418 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
-2020-11-28 14:16:22,059 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
+2020-11-29 14:14:13,420 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 10924 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 14:14:13,438 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 14:14:13,439 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 15:16:13,108 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 2740 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 15:16:13,112 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 15:16:13,113 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 15:16:23,355 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.917 seconds (JVM running for 14.391)
+2020-11-29 15:22:01,946 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 12744 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 15:22:01,949 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 15:22:01,950 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 15:22:11,253 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.743 seconds (JVM running for 12.795)
+2020-11-29 15:27:55,671 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 13548 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 15:27:55,676 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 15:27:55,678 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 15:28:05,432 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.253 seconds (JVM running for 13.234)
+2020-11-29 15:41:07,204 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 8100 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 15:41:07,209 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 15:41:07,210 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 15:41:16,960 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.244 seconds (JVM running for 12.666)
+2020-11-29 15:45:58,367 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 12580 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 15:45:58,373 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 15:45:58,373 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 15:46:09,375 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 11.547 seconds (JVM running for 14.869)
+2020-11-29 15:48:59,746 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 15:48:59,949 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 15:49:01,163 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 15:49:07,489 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 15:49:07,490 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 15:49:07,549 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 15:49:33,078 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT SGBH,XZQH,DJBH,KSKCSJ,JSKCSJ,XQ,SGFSSJ,LH,LM,GLS,MS,QDMS,JDWZ,SGDD,ZHDMWZ,ZYGLSS,DLAQSX,JTXHFS,FHSSLX,DLWLGL,LMZK,LBQK,LMJG,LKLDLX,DLXX,DLLX,KCR1,KCR2,BAR1,BAR2,SWRS,SWRSQ,SWRS24,SSRS24,SWRS3,SSRS3,SWRS7,SSRS7,SWRS30,SSRS30,SZRS,ZSRS,QSRS,SSRS,JDCSL,FJDCSL,XRSL,XSGLBM,XSBADW,XSBAR,TPZS,XCTZS,XCZPZS,ZJCCSS,SGLX,LWSGLX,CCYYFL,RDYYFL,SGCCYY,SGRDYY,JYAQ,TQ,NJD,XC,SWSG,SGXT,SFTY,CLJSG,DCSG,PZFS,TYSGZP,TYZPSJ,DX,ZMTJ,TJR1,TJR2,YZWXP,YZWXPHG,CCLRSJ,JLLX,SCSJD,JBR,TJSJ,GXSJ,SSZD,GLXZDJ,DAH,JNH,SXXZ,SB,TJSGBH,GLBM,YLZD1,YLZD2,YLZD3,YLZD4,YLZD5,DZZB,TDYL1,TDYL2,TDYL3,TDYL4,TDYL5,TDYL6,TDYL7,TDYL8,TDYL9,TDYL10,BALXFS,BADW,XYXDM,JYW,SFECSG,SFDXSG,DLAQYHDJ,DSRZS,FSJG,FFJG,SDSGDSCWZ,HLZT,ZBLX,AJMC FROM LRX.ACD_FILE WHERE (SGFSSJ BETWEEN ? AND ? AND TO_CHAR(SGFSSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
+2020-11-29 15:49:33,098 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
+2020-11-29 15:49:33,652 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 830
+2020-11-29 15:50:13,064 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
+2020-11-29 15:50:13,067 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-15 00:00:00.0(Timestamp), 2020-04-16 00:00:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
+2020-11-29 15:50:17,251 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 7675
+2020-11-29 15:51:51,387 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ? AND WFDD IN (?,?,?,?)) 
+2020-11-29 15:51:51,389 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-15 00:00:00.0(Timestamp), 2020-04-16 00:00:00.0(Timestamp), 00:00:01(String), 24:00:00(String), 10208(String), 20348(String), 24100(String), 30144(String)
+2020-11-29 15:51:51,401 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 0
+2020-11-29 15:54:20,438 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 3740 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 15:54:20,445 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 15:54:20,449 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 15:54:30,779 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 11.076 seconds (JVM running for 14.301)
+2020-11-29 16:21:46,908 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 14368 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 16:21:46,913 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 16:21:46,914 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 16:21:59,853 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 13.628 seconds (JVM running for 18.569)
+2020-11-29 16:28:36,846 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 15336 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 16:28:36,850 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 16:28:36,850 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 16:28:46,458 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.081 seconds (JVM running for 13.163)
+2020-11-29 16:35:16,125 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 13576 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 16:35:16,129 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 16:35:16,130 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 16:35:28,114 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 12.545 seconds (JVM running for 16.256)
+2020-11-29 16:36:18,283 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 14348 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 16:36:18,291 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 16:36:18,293 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 16:36:28,751 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.954 seconds (JVM running for 13.714)
+2020-11-29 16:50:18,443 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 7336 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 16:50:18,446 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 16:50:18,447 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 16:50:27,774 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.803 seconds (JVM running for 12.597)
+2020-11-29 17:47:43,392 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 14912 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 17:47:43,396 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 17:47:43,397 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 17:47:53,768 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.833 seconds (JVM running for 13.243)
+2020-11-29 18:08:50,805 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 12676 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:08:50,809 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:08:50,810 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:09:00,369 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.995 seconds (JVM running for 12.986)
+2020-11-29 18:09:09,300 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 18:09:09,328 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:09:10,610 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 18:09:20,466 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 18:09:20,467 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:09:21,557 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 18:13:04,060 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 7540 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:13:04,063 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:13:04,064 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:13:13,764 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.147 seconds (JVM running for 13.027)
+2020-11-29 18:13:22,293 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 18:13:22,320 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:13:23,379 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 18:13:29,547 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 18:13:29,548 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:13:30,387 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 18:13:37,387 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 18:13:37,388 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:13:37,456 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 18:16:54,154 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 8036 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:16:54,158 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:16:54,159 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:17:03,835 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.116 seconds (JVM running for 12.437)
+2020-11-29 18:17:10,739 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 18:17:10,765 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:17:11,804 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 18:20:10,947 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 4544 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:20:10,951 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:20:10,952 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:20:20,978 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.505 seconds (JVM running for 14.082)
+2020-11-29 18:20:25,911 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 18:20:25,940 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:20:26,919 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 18:20:47,369 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 18:20:47,370 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:20:47,441 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 18:26:01,995 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 2440 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:26:02,021 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:26:02,023 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:26:14,215 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 12.855 seconds (JVM running for 15.986)
+2020-11-29 18:26:17,680 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 18:26:17,714 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:26:17,799 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 18:26:23,068 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 18:26:23,068 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:26:24,023 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 18:26:30,550 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 18:26:30,551 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:26:30,601 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 18:28:08,629 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 5736 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:28:08,632 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:28:08,633 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:28:34,583 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 12396 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:28:34,596 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:28:34,597 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:28:44,143 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.008 seconds (JVM running for 13.602)
+2020-11-29 18:28:48,304 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 18:28:48,331 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:28:48,425 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 18:29:48,724 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 3276 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:29:48,727 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:29:48,728 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:29:58,413 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.146 seconds (JVM running for 13.488)
+2020-11-29 18:30:01,504 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 18:30:01,539 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 18:30:01,626 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 18:30:48,885 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 5596 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:30:48,890 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:30:48,894 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:30:58,424 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.982 seconds (JVM running for 13.767)
+2020-11-29 18:32:38,967 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 232 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:32:38,971 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:32:38,972 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:32:48,624 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.121 seconds (JVM running for 12.716)
+2020-11-29 18:37:03,425 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 7292 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:37:03,430 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:37:03,431 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:37:13,092 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.125 seconds (JVM running for 13.538)
+2020-11-29 18:39:38,309 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 7076 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 18:39:38,316 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 18:39:38,318 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 18:39:47,921 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.211 seconds (JVM running for 13.581)
+2020-11-29 19:03:53,532 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 14296 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 19:03:53,540 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 19:03:53,541 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 19:04:03,586 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.493 seconds (JVM running for 12.772)
+2020-11-29 19:04:34,788 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) and rownum < 100 
+2020-11-29 19:04:34,788 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) and rownum < 100 
+2020-11-29 19:04:34,812 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
+2020-11-29 19:04:34,812 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
+2020-11-29 19:04:34,930 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 99
+2020-11-29 19:04:34,934 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 99
+2020-11-29 19:04:38,167 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 19:04:38,168 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 19:04:39,069 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 19:04:46,167 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct lh FROM LRX.ACD_FILE 
+2020-11-29 19:04:46,167 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 19:04:46,223 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 322
+2020-11-29 19:07:10,854 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 3704 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 19:07:10,858 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 19:07:10,859 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 19:07:20,464 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 10.045 seconds (JVM running for 12.795)
+2020-11-29 19:11:59,421 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 11240 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-11-29 19:11:59,425 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-11-29 19:11:59,426 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-11-29 19:12:08,840 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 9.835 seconds (JVM running for 12.18)
+2020-11-29 19:12:15,996 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 19:12:16,020 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 19:12:17,257 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 20:26:36,303 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) and rownum < 100 
+2020-11-29 20:26:36,303 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) and rownum < 100 
+2020-11-29 20:26:36,310 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
+2020-11-29 20:26:36,310 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-10 10:10:00.0(Timestamp), 2020-06-09 10:10:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
+2020-11-29 20:26:36,425 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 99
+2020-11-29 20:26:36,434 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 99
+2020-11-29 20:26:44,046 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) and rownum < 100 
+2020-11-29 20:26:44,047 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-14 00:00:00.0(Timestamp), 2020-04-22 00:00:00.0(Timestamp), 00:00:01(String), 24:00:00(String)
+2020-11-29 20:26:44,112 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 99
+2020-11-29 20:27:12,470 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION offset 100 rows fetch next 100 rows only 
+2020-11-29 20:27:12,470 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 20:27:12,532 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 100
+2020-11-29 20:27:28,793 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION offset 200 rows fetch next 100 rows only 
+2020-11-29 20:27:28,794 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 20:27:28,874 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 100
+2020-11-29 20:28:16,122 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT distinct wfdd FROM LRX.VIO_VIOLATION 
+2020-11-29 20:28:16,122 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2020-11-29 20:28:17,056 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 6375
+2020-11-29 20:29:09,760 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT WFBH,JDSLB,JDSBH,WSJYW,RYFL,JSZH,DABH,FZJG,ZJCX,DSR,ZSXZQH,ZSXXDZ,DH,LXFS,CLFL,HPZL,HPHM,JDCSYR,SYXZ,JTFS,WFSJ,XZQH,DLLX,GLXZDJ,WFDD,LDDM,DDMS,DDJDWZ,WFDZ,WFXW,WFJFS,FKJE,SCZ,BZZ,ZNJ,ZQMJ,JKFS,FXJG,FXJGMC,CLJG,CLJGMC,CFZL,CLSJ,JKBJ,JKRQ,PZBH,JSJQBJ,JLLX,LRR,LRSJ,JBR1,JBR2,SGDJ,CLDXBJ,JDCCLDXBJ,ZDJLBJ,XXLY,XRMS,DKBJ,JMZNJBJ,ZDBJ,JSJG,FSJG,GXSJ,BZ,YWJYW,ZJMC,CCLZRQ,NL,XB,HCBJ,JD,WD,YLZZ1,YLZZ2,YLZZ3,YLZZ4,YLZZ5,YLZZ6,YLZZ7,YLZZ8,CJFS,WFSJ1,WFDD1,LDDM1,DDMS1,JSRXZ,CLYT,XCFW,DZZB,SFZDRY,XYSFZMHM,XYXM,YLZZ11,YLZZ12,YLZZ13,YLZZ14,YLZZ15,YLZZ16,YLZZ17,YLZZ18,QZFS,SJHM,DCLJG,DCLJGMC,SFYDCL,DCLFZJG,DZDASFCJ FROM LRX.VIO_VIOLATION WHERE (WFSJ BETWEEN ? AND ? AND TO_CHAR(WFSJ, 'hh24:mi:ss') BETWEEN ? AND ?) 
+2020-11-29 20:29:09,760 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 2020-04-22 00:00:00.0(Timestamp), 2020-04-23 00:00:00.0(Timestamp), 10:49:55(String), 24:00:00(String)
+2020-11-29 20:29:11,997 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 4206

@@ -25,7 +25,7 @@ public class ViolationController {
         ModelAndView mav = new ModelAndView();
         JSONArray tables_json_array = JSONArray.fromObject(ViolationTables.getTables());
         mav.addObject("tables", tables_json_array.toString());
-        mav.setViewName("LXH/vio_rules");
+        mav.setViewName("/LXH/vio_rules");
         return mav;
     }
 
@@ -33,15 +33,12 @@ public class ViolationController {
     @ResponseBody
     @RequestMapping("/get_attribute" )
     public List<String> ACD_FILE_rules(HttpServletRequest request) {
-        String table_selected = request.getParameter("table_selected");
-//        System.out.println(table_selected);
-//        System.out.println(table_selected.getClass().getName());
-//        System.out.println(table_selected.equals("ACD_FILE"));
-//        Map<String, String> map = AccidentTables.getConlumns(table_selected);
-        Map<String, String> map = ViolationTables.getConlumns("VIO_VIOLATION");
+        String table_selected = request.getParameter("table_selected").toString();
+        Map<String, String> map = ViolationTables.getConlumns(table_selected);
         List<String> columnChinese = new ArrayList<>();
         for (HashMap.Entry<String, String> entry : map.entrySet()) {
             columnChinese.add(entry.getKey());
+            System.out.println(entry.getKey());
         }
         return columnChinese;
     }
@@ -53,6 +50,8 @@ public class ViolationController {
         String support = request.getParameter("support");
         String confidence = request.getParameter("confidence");
         String tablename = request.getParameter("tablename").toString();
+        String algrithom = request.getParameter("algrithom").toString();
+
         Map<String,String> map = ViolationTables.getConlumns(tablename);
 
         System.out.println("tablename:"+tablename);
@@ -63,13 +62,10 @@ public class ViolationController {
         obj = obj.replace("\"", "");
         System.out.println("obj："+obj);
         String[] strarray=obj.split(",");
-        System.out.println("strarray:");
         List<String> list = new ArrayList();
 
         for(String str:strarray){
-            System.out.println(str);
             String column = map.get(str);
-            System.out.println(column);
             list.add(column);
         }
 
@@ -78,12 +74,7 @@ public class ViolationController {
         Process proc;
         try {
 
-            String[] args1 = new String[]{"python", "C:/Users/10356/Desktop/data_mine/test2.py",list.toString(), support,confidence,tablename};
-            System.out.println(list.toString());
-            System.out.println(support);
-            System.out.println(confidence);
-            System.out.println(tablename);
-
+            String[] args1 = new String[]{"python", "C:/Users/10356/Desktop/data_mine/test2.py",list.toString(), support,confidence,tablename,algrithom};
             proc = Runtime.getRuntime().exec(args1);
             //用输入输出流来截取结果
             BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));

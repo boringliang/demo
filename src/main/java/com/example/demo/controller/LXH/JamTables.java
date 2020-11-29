@@ -4,6 +4,7 @@ import java.util.*;
 
 public class JamTables {
     private static List<String> tables = new ArrayList<>(Arrays.asList(
+            "请选择",
             "SectionStatusDataSn1月"
 
     ));

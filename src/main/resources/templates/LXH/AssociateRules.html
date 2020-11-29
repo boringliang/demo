@@ -44,19 +44,46 @@
     <script src="../../static/assets/echarts.min.js"></script>
 
 
+
     <script src="../../static/assets/plugins/jquery/jquery.min.js"></script>
+    <script src="../../static/assets/js/lyw/sidebar.js"></script>
 
     <style type="text/css">
-        html,#container{
+        table.gridtable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+    </style>
+
+    <style type="text/css">
+        #containermap{
             width: 100%;
-            height: 100%;
+            height: 300px;
             margin: 20px;
-            left:10%
         }
         .btn{
             width:10rem;
             margin-left:6.8rem;
         }
+
     </style>
 
 
@@ -78,216 +105,7 @@
 ——— LEFT SIDEBAR WITH FOOTER
 =====================================
 -->
-    <aside class="left-sidebar bg-sidebar">
-        <div id="sidebar" class="sidebar sidebar-with-footer">
-            <!-- Aplication Brand -->
-            <div class="app-brand">
-                <a href="/index.html">
-                    <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
-                         width="30" height="33" viewBox="0 0 30 33">
-                        <g fill="none" fill-rule="evenodd">
-                            <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z" />
-                            <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
-                        </g>
-                    </svg>
-                    <span class="brand-name">交管决策指挥中心</span>
-                </a>
-            </div>
-            <!-- begin sidebar scrollbar -->
-            <div class="sidebar-scrollbar">
 
-                <!-- sidebar menu -->
-                <ul class="nav sidebar-inner" id="sidebar-menu">
-                    <!--交通事件特征分析-->
-                    <li class="has-sub expand">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#trafficeventfeature" aria-expanded="false" aria-controls="dashboard">
-                            <i class="mdi mdi-view-dashboard-outline"></i>
-                            <span class="nav-text">交通事件特征分析</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse show" id="trafficeventfeature" data-parent="#sidebar-menu">
-                            <div class="sub-menu">
-                                <li>
-                                    <a class="sidenav-item-link" href="accident">
-                                        <span class="nav-text">交通事故</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="/weifa">
-                                        <span class="nav-text">交通违法</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="/guihua">
-                                        <span class="nav-text">交通规划</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="/traffic_jam_INDEX_ROAD_INDEX">
-                                        <span class="nav-text">交通拥堵</span>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                                    <a class="sidenav-item-link" href="/tufaevent">
-                                        <span class="nav-text">突发事件</span>
-                                    </a>
-                                </li> -->
-                                <li>
-                                    <a class="sidenav-item-link" href="/yuan">
-                                        <span class="nav-text">交通预案</span>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                                    <a class="sidenav-item-link" href="/weather">
-                                        <span class="nav-text">气象影响</span>
-                                    </a>
-                                </li> -->
-                                <!-- <li>
-                                    <a class="sidenav-item-link" href="/volum">
-                                        <span class="nav-text">交通流量</span>
-                                    </a>
-                                </li> -->
-                            </div>
-                        </ul>
-                    </li>
-
-                    <!--情报数据展示-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#qbsjzs"
-                           aria-expanded="false" aria-controls="icons">
-                            <i class="mdi mdi-book-open-page-variant"></i>
-                            <span class="nav-text">情报数据展示</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="qbsjzs">
-                            <div class="sub-menu">
-                                <li>
-                                    <a href="/intelligen">情报数据展示</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <!--事件研判分析-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#shijianyanpan" aria-expanded="false" aria-controls="icons">
-                            <i class="mdi mdi-chart-pie"></i>
-                            <span class="nav-text">事件研判分析</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="shijianyanpan">
-                            <div class="sub-menu">
-                                <li>
-                                    <a href="/Traffic_Accident">全市事故统计</a>
-                                </li>
-                                <li>
-                                    <a href="/Illegal">全市违法统计</a>
-                                </li>
-                                <li>
-                                    <a href="/showVideo">视频信息</a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <!--知识图谱-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
-                            <i class="mdi mdi-image-filter-none"></i>
-                            <span class="nav-text">知识图谱</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
-                            <div class="sub-menu">
-                                <li class="has-sub">
-                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                       data-target="#components" aria-expanded="false" aria-controls="components">
-                                        <span class="nav-text">知识图谱展示</span> <b class="caret"></b>
-                                    </a>
-                                </li>
-                                <li class="has-sub">
-                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                       data-target="#icons" aria-expanded="false" aria-controls="icons">
-                                        <span class="nav-text">知识图谱应用场景</span> <b class="caret"></b>
-                                    </a>
-                                    <ul class="collapse" id="icons">
-                                        <div class="sub-menu">
-                                            <li>
-                                                <a href="../material-icon.html">拥堵预测</a>
-                                            </li>
-                                            <li>
-                                                <a href="../flag-icon.html">拥堵蔓延分析</a>
-                                            </li>
-                                        </div>
-                                    </ul>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-
-                    <!--事件图谱-->
-                    <li class="has-sub">
-                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                           data-target="#charts" aria-expanded="false" aria-controls="charts">
-                            <i class="mdi mdi-folder-multiple-outline"></i>
-                            <span class="nav-text">事件图谱</span> <b class="caret"></b>
-                        </a>
-                        <ul class="collapse" id="charts" data-parent="#sidebar-menu">
-                            <div class="sub-menu">
-                                <li>
-                                    <a class="sidenav-item-link" href="Police_case">
-                                        <span class="nav-text">事件图谱展示</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="sidenav-item-link" href="eventgraph_appilication">
-                                        <span class="nav-text">事件图谱应用场景</span>
-                                    </a>
-                                </li>
-                            </div>
-                        </ul>
-                    </li>
-                    <!--视频理解-->
-                    <!-- <li  class="has-sub" >
-            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#pages"
-               aria-expanded="false" aria-controls="pages">
-              <i class="mdi mdi-image-filter-none"></i>
-              <span class="nav-text">视频理解</span> <b class="caret"></b>
-            </a>
-            <ul  class="collapse"  id="pages"
-                 data-parent="#sidebar-menu">
-              <div class="sub-menu">
-                <li >
-                  <a class="sidenav-item-link" href="../user-profile.html">
-                    <span class="nav-text">视频属性概要展示</span>
-                  </a>
-                </li>
-              </div>
-            </ul>
-          </li> -->
-
-                    <!--对话系统-->
-                    <!-- <li  class="has-sub" >
-            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#documentation"
-               aria-expanded="false" aria-controls="documentation">
-              <i class="mdi mdi-book-open-page-variant"></i>
-              <span class="nav-text">对话系统</span> <b class="caret"></b>
-            </a>
-            <ul  class="collapse"  id="documentation"
-                 data-parent="#sidebar-menu">
-              <div class="sub-menu">
-                <li >
-                  <a class="sidenav-item-link" href="rtl.html">
-                    <span class="nav-text">对话场景展示</span>
-                  </a>
-                </li>
-              </div>
-            </ul>
-          </li> -->
-                </ul>
-            </div>
-
-            <hr class="separator" />
-
-        </div>
-    </aside>
 
     <div class="page-wrapper">
         <!-- Header -->
@@ -470,11 +288,11 @@
                 <br>
 
 
-                <div id="container"></div>
+                <div id="containermap" class="rightbox"></div>
 
                 <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=bf8e259f67ad227cf7eb9b54e03bb2c5&plugin=AMap.Geocoder"></script>
                 <script type="text/javascript">
-                    var map = new AMap.Map("container", {
+                    var map = new AMap.Map("containermap", {
                         resizeEnable: true
                     });
 
@@ -512,9 +330,9 @@
 
                 </script>
 
-                <div class="tableDiv">
+                <div class="leftbox">
 
-                    <table align="center" >
+                    <table align="center" class="gridtable">
                         <tr>
                             <td>index      confidence          rules</td>
 
@@ -581,14 +399,20 @@
                         head = head.replace("]->","");
                         var tail = strs[strs.length-1];
                         tail = tail.replace("]","");
+
                         var addresses = new Array();
                         addresses.push(head);
                         addresses.push(tail);
                         var str=addresses.join("*");
                         alert(addresses[0]);
+                        alert(addresses[1]);
+
+                        var headarray = head.split(",");
+                        var tailarray = tail.split(",")
+
 
                         //点击表格行获取该行所有数据
-                        var map = new AMap.Map("container", {
+                        var map = new AMap.Map("containermap", {
                             resizeEnable: true
                         });
 
@@ -596,9 +420,13 @@
                             city: "青岛", //城市设为北京，默认：“全国”
                         });
                         var markers=[];
+                        var markers2=[];
+
                         map.remove(markers);
                         markers = [];
-                        var address  = addresses;
+                        markers2=[];
+
+                        var address  = headarray;
                         geocoder.getLocation(address, function(status, result) {
                             if (status === 'complete'&&result.geocodes.length) {
                                 for(var i=0;i<result.geocodes.length;i+=1){
@@ -609,6 +437,24 @@
                                 }
                                 map.add(markers);
                                 map.setFitView(markers);
+                            }
+                        });
+                        var address2  = tailarray;
+
+                        geocoder.getLocation(address2, function(status, result) {
+                            if (status === 'complete'&&result.geocodes.length) {
+                                for(var i=0;i<result.geocodes.length;i+=1){
+                                    var  marker = new AMap.Marker({
+                                        position: result.geocodes[i].location,
+                                        icon: 'http://webapi.amap.com/theme/v1.3/markers/b/mark_r.png'
+                                    });
+                                    markers2.push(marker);
+                                }
+                                map.add(markers);
+                                map.setFitView(markers);
+                                map.add(markers2)
+                                map.setFitView(markers2);
+
                             }
                         });
 

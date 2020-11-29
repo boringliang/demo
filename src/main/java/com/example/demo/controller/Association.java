@@ -116,7 +116,7 @@ public class Association {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time1 = sdf.format(aa);
         String time2 = sdf.format(bb);
-        String wfdds_string = request.getParameter("lhs");
+        String wfdds_string = request.getParameter("wfdds");
         String fields_string = request.getParameter("fields");
         List<String> fields = Arrays.asList(fields_string.split(","));
         List<VioViolation> res;

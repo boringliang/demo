@@ -26,7 +26,7 @@ public class AssociateRuleController {
         ModelAndView mav = new ModelAndView();
         JSONArray tables_json_array = JSONArray.fromObject(JamTables.getTables());
         mav.addObject("tables", tables_json_array.toString());
-        mav.setViewName("LXH/AssociateRules");
+        mav.setViewName("/LXH/AssociateRules");
         return mav;
     }
 
@@ -47,15 +47,9 @@ public class AssociateRuleController {
         try {
 
             String[] args1 = new String[]{"python", "C:/Users/10356/Desktop/data_mine/test.py", start_time, end_time, confidence, support, table_selected};
-            System.out.println(start_time);
-            System.out.println(end_time);
-            System.out.println(confidence);
-            System.out.println(support);
-            System.out.println(table_selected);
-
             proc = Runtime.getRuntime().exec(args1);
             //用输入输出流来截取结果
-            BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream(),"GB2312"));
+            BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream(), "GB2312"));
             String line = null;
             while ((line = in.readLine()) != null) {
                 list.add(line);
