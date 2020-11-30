@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.demo.entity.VioViolation;
 import com.example.demo.mapper.VioViolationMapper;
 //import com.sun.org.apache.xpath.internal.operations.Mod;
+//import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.jena.base.Sys;
 import org.apache.jena.rdf.model.Model;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -251,4 +252,10 @@ public class VioViolationController {
 //        modelAndView.setViewName("test");
 //        return modelAndView;
 //    }
+    @RequestMapping("violation_cluster")
+    ModelAndView violation_cluster() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("/LYW_templates/violation_cluster");
+        return modelAndView;
+    }
 }

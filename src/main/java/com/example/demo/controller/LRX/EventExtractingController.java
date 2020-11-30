@@ -120,4 +120,31 @@ public class EventExtractingController {
         System.out.println(result);
         return result;
     }
+
+    @RequestMapping("/lrx/eenextpage")
+    @ResponseBody
+    public List eenextpage(HttpServletRequest request) {
+        String currentPage = request.getParameter("currentPage");
+        System.out.println(currentPage);
+        String sql="SELECT \"ACD_DATABASE\".\"ACD_FILE_BASE_SLIM\".*,ROWID \"NAVICAT_ROWID\" " +
+                "FROM \"ACD_DATABASE\".\"ACD_FILE_BASE_SLIM\" " +
+                "OFFSET " + (Integer.parseInt(currentPage)+1)*10 + "ROWS FETCH NEXT 10 ROWS ONLY";
+        fenye fy=new fenye();
+        List<List> result = fy.selectBySql(sql);
+        System.out.println(result);
+        return result;
+    }
+    @RequestMapping("/lrx/eepreviouspage")
+    @ResponseBody
+    public List eepreviouspage(HttpServletRequest request) {
+        String currentPage = request.getParameter("currentPage");
+        System.out.println(currentPage);
+        String sql="SELECT \"ACD_DATABASE\".\"ACD_FILE_BASE_SLIM\".*,ROWID \"NAVICAT_ROWID\" " +
+                "FROM \"ACD_DATABASE\".\"ACD_FILE_BASE_SLIM\" " +
+                "OFFSET " + (Integer.parseInt(currentPage)-1)*10 + "ROWS FETCH NEXT 10 ROWS ONLY";
+        fenye fy=new fenye();
+        List<List> result = fy.selectBySql(sql);
+        System.out.println(result);
+        return result;
+    }
 }

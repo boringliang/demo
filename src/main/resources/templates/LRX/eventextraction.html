@@ -38,12 +38,11 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="../../static/assets/plugins/nprogress/nprogress.js"></script>
-    <script src="../../static/assets/plugins/jquery/jquery.min.js"></script>
-    <script src="../../static/assets/js/lyw/sidebar.js"></script>
 </head>
 
 
 <body class="sidebar-fixed sidebar-dark header-light header-fixed" id="body">
+<script src="../../static/assets/js/jquery-1.9.1.min.js"></script>
 <script>
     NProgress.configure({showSpinner: false});
     NProgress.start();
@@ -58,7 +57,181 @@
   ——— LEFT SIDEBAR WITH FOOTER
   =====================================
   -->
+    <aside class="left-sidebar bg-sidebar">
+        <div id="sidebar" class="sidebar sidebar-with-footer">
+            <!-- Aplication Brand -->
+            <div class="app-brand">
+                <a href="/index.html">
+                    <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+                         width="30" height="33" viewBox="0 0 30 33">
+                        <g fill="none" fill-rule="evenodd">
+                            <path class="logo-fill-blue" fill="#7DBCFF" d="M0 4v25l8 4V0zM22 4v25l8 4V0z"/>
+                            <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z"/>
+                        </g>
+                    </svg>
+                    <span class="brand-name">交管决策指挥中心</span>
+                </a>
+            </div>
+            <!-- begin sidebar scrollbar -->
+            <div class="sidebar-scrollbar">
 
+                <!-- sidebar menu -->
+                <ul class="nav sidebar-inner" id="sidebar-menu">
+                    <!--交通事件特征分析-->
+                    <li class="has-sub expand">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#trafficeventfeature" aria-expanded="false" aria-controls="dashboard">
+                            <i class="mdi mdi-view-dashboard-outline"></i>
+                            <span class="nav-text">交通事件特征分析</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse show" id="trafficeventfeature" data-parent="#sidebar-menu">
+                            <div class="sub-menu">
+                                <li>
+                                    <a class="sidenav-item-link" href="accident">
+                                        <span class="nav-text">交通事故</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="/weifa">
+                                        <span class="nav-text">交通违法</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="/guihua">
+                                        <span class="nav-text">交通规划</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="/traffic_jam_INDEX_ROAD_INDEX">
+                                        <span class="nav-text">交通拥堵</span>
+                                    </a>
+                                </li>
+                                <!-- <li>
+                                    <a class="sidenav-item-link" href="/tufaevent">
+                                        <span class="nav-text">突发事件</span>
+                                    </a>
+                                </li> -->
+                                <li>
+                                    <a class="sidenav-item-link" href="/yuan">
+                                        <span class="nav-text">交通预案</span>
+                                    </a>
+                                </li>
+                                <!-- <li>
+                                    <a class="sidenav-item-link" href="/weather">
+                                        <span class="nav-text">气象影响</span>
+                                    </a>
+                                </li> -->
+                                <!-- <li>
+                                    <a class="sidenav-item-link" href="/volum">
+                                        <span class="nav-text">交通流量</span>
+                                    </a>
+                                </li> -->
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!--情报数据展示-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#qbsjzs"
+                           aria-expanded="false" aria-controls="icons">
+                            <i class="mdi mdi-book-open-page-variant"></i>
+                            <span class="nav-text">情报数据展示</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="qbsjzs">
+                            <div class="sub-menu">
+                                <li>
+                                    <a href="/intelligen">情报数据展示</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--事件研判分析-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#shijianyanpan" aria-expanded="false" aria-controls="icons">
+                            <i class="mdi mdi-chart-pie"></i>
+                            <span class="nav-text">事件研判分析</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="shijianyanpan">
+                            <div class="sub-menu">
+                                <li>
+                                    <a href="/Traffic_Accident">全市事故统计</a>
+                                </li>
+                                <li>
+                                    <a href="/Illegal">全市违法统计</a>
+                                </li>
+                                <li>
+                                    <a href="/showVideo">视频信息</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!--知识图谱-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
+                            <i class="mdi mdi-image-filter-none"></i>
+                            <span class="nav-text">知识图谱</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
+                            <div class="sub-menu">
+                                <li class="has-sub">
+                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                       data-target="#components" aria-expanded="false" aria-controls="components">
+                                        <span class="nav-text">知识图谱展示</span> <b class="caret"></b>
+                                    </a>
+                                </li>
+                                <li class="has-sub">
+                                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                                       data-target="#icons" aria-expanded="false" aria-controls="icons">
+                                        <span class="nav-text">知识图谱应用场景</span> <b class="caret"></b>
+                                    </a>
+                                    <ul class="collapse" id="icons">
+                                        <div class="sub-menu">
+                                            <li>
+                                                <a href="../material-icon.html">拥堵预测</a>
+                                            </li>
+                                            <li>
+                                                <a href="../flag-icon.html">拥堵蔓延分析</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!--事件图谱-->
+                    <li class="has-sub">
+                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                           data-target="#charts" aria-expanded="false" aria-controls="charts">
+                            <i class="mdi mdi-folder-multiple-outline"></i>
+                            <span class="nav-text">事件图谱</span> <b class="caret"></b>
+                        </a>
+                        <ul class="collapse" id="charts" data-parent="#sidebar-menu">
+                            <div class="sub-menu">
+                                <li>
+                                    <a class="sidenav-item-link" href="Police_case">
+                                        <span class="nav-text">事件图谱展示</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="sidenav-item-link" href="eventgraph_appilication">
+                                        <span class="nav-text">事件图谱应用场景</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+            <hr class="separator"/>
+
+        </div>
+    </aside>
 
 
     <div class="page-wrapper">
@@ -295,19 +468,30 @@
                     <div class="col-xl-12 col-sm-12">
                         <div class="card card-mini mb-4">
                             <div class="card-header justify-content-left">
-                                <button style="padding-left:5px;padding-right:5px;font-size: 16px;">日</button>
+                                <button id="curpag" style="padding-left:5px;padding-right:5px;font-size: 16px;">
+                                </button>
                                 |
+                                <button style="padding-left:5px;padding-right:5px;font-size: 16px;"
+                                        onclick="previouspageajax()">上一页
+                                </button>
+                                |
+                                <!--<button-->
+                                        <!--style="padding-left:5px;padding-right:5px;font-size: 16px;">周-->
+                                <!--</button>-->
+                                <!--|-->
+                                <!--<button-->
+                                        <!--style="padding-left:5px;padding-right:5px;font-size: 16px;">月-->
+                                <!--</button>-->
+                                <input type="text" placeholder="跳转" id="jump" name="jump">
                                 <button
-                                        style="padding-left:5px;padding-right:5px;font-size: 16px;">周
+                                        style="padding-left:5px;padding-right:5px;font-size: 16px;">跳转
                                 </button>
                                 |
                                 <button
-                                        style="padding-left:5px;padding-right:5px;font-size: 16px;">月
+                                        style="padding-left:5px;padding-right:5px;font-size: 16px;"
+                                        onclick="nextpageajax()">下一页
                                 </button>
-                                |
-                                <button
-                                        style="padding-left:5px;padding-right:5px;font-size: 16px;">年
-                                </button>
+
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -352,6 +536,7 @@
 
 
                 <script type="text/javascript">
+                    var currentPage = 0
                     function addressajax(sgbh,th){
                         str="<tr class='extrainfo'><td colspan='20'><p>";
                         $.ajax({
@@ -599,7 +784,6 @@
                         $("#showtable").append(str);
                     }
 
-
                     $(document).ready(function () {
                         $.ajax({
                             url: "/lrx/eegetbasetable",
@@ -607,6 +791,9 @@
                             data: {},
                             success: function (data) {
                                 console.log(data);
+                                t = currentPage+1
+                                $("#curpag").empty()
+                                $("#curpag").append("第" + t + "页")
                                 drawtable(data);
                             },
                             error: function (data) {
@@ -615,6 +802,40 @@
                         })
 
                     })
+                    function nextpageajax(){
+                        $.ajax({
+                            url: "/lrx/eenextpage",
+                            type:"post",
+                            data: {"currentPage":currentPage},
+                            success: function (data) {
+                                currentPage += 1
+                                t = currentPage+1
+                                $("#curpag").empty()
+                                $("#curpag").append("第" + t + "页")
+                                drawtable(data);
+                            },
+                            error: function (data) {
+                                alert("AJAX-error")
+                            }
+                        })
+                    }
+                    function previouspageajax(){
+                        $.ajax({
+                            url: "/lrx/eepreviouspage",
+                            type:"post",
+                            data: {"currentPage":currentPage},
+                            success: function (data) {
+                                currentPage = currentPage - 1
+                                t = currentPage+1
+                                $("#curpag").empty()
+                                $("#curpag").append("第" + t + "页")
+                                drawtable(data);
+                            },
+                            error: function (data) {
+                                alert("AJAX-error")
+                            }
+                        })
+                    }
                 </script>
 
             </div>

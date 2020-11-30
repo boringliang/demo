@@ -243,29 +243,29 @@ $(document).ready(function () {
         // '                        </ul>\n' +
         // '                    </li>\n' +
         // '\n' +
-        // '                    <!--事件图谱-->\n' +
-        // '                    <li class="has-sub">\n' +
-        // '                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"\n' +
-        // '                           data-target="#charts" aria-expanded="false" aria-controls="charts">\n' +
-        // '                            <i class="mdi mdi-folder-multiple-outline"></i>\n' +
-        // '                            <span class="nav-text">事件图谱</span> <b class="caret"></b>\n' +
-        // '                        </a>\n' +
-        // '                        <ul class="collapse" id="charts" data-parent="#sidebar-menu">\n' +
-        // '                            <div class="sub-menu">\n' +
-        // '                                <li>\n' +
-        // '                                    <a class="sidenav-item-link" href="Police_case">\n' +
-        // '                                        <span class="nav-text">事件图谱展示</span>\n' +
-        // '                                    </a>\n' +
-        // '                                </li>\n' +
-        // '                                <li>\n' +
-        // '                                    <a class="sidenav-item-link" href="eventgraph_appilication">\n' +
-        // '                                        <span class="nav-text">事件图谱应用场景</span>\n' +
-        // '                                    </a>\n' +
-        // '                                </li>\n' +
-        // '                            </div>\n' +
-        // '                        </ul>\n' +
-        // '                    </li>\n' +
-        // '\n' +
+        '                    <!--事件图谱-->\n' +
+        '                    <li class="has-sub">\n' +
+        '                        <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"\n' +
+        '                           data-target="#charts" aria-expanded="false" aria-controls="charts">\n' +
+        '                            <i class="mdi mdi-folder-multiple-outline"></i>\n' +
+        '                            <span class="nav-text">事件聚类</span> <b class="caret"></b>\n' +
+        '                        </a>\n' +
+        '                        <ul class="collapse" id="charts" data-parent="#sidebar-menu">\n' +
+        '                            <div class="sub-menu">\n' +
+        '                                <li>\n' +
+        '                                    <a class="sidenav-item-link" href="/violation_cluster">\n' +
+        '                                        <span class="nav-text">违法事件聚类</span>\n' +
+        '                                    </a>\n' +
+        '                                </li>\n' +
+        '                                <li>\n' +
+        '                                    <a class="sidenav-item-link" href="/lrx/hierarchical">\n' +
+        '                                        <span class="nav-text">事故事件聚类</span>\n' +
+        '                                    </a>\n' +
+        '                                </li>\n' +
+        '                            </div>\n' +
+        '                        </ul>\n' +
+        '                    </li>\n' +
+        '\n' +
         '                </ul>\n' +
         '            </div>\n' +
         '\n' +

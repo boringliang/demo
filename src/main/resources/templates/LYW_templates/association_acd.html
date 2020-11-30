@@ -38,8 +38,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="../../static/assets/plugins/nprogress/nprogress.js"></script>
-<!--    <script src="../../static/assets/d3.js" charset="utf-8"></script>-->
+<!--    <script src="../../static/assets/d3.v6.js" charset="utf-8"></script>-->
 <!--    <script src="../../static/assets/d3.min.js" charset="utf-8"></script>-->
+    <script src="http://d3js.org/d3.v5.js" charset="utf-8"></script>
     <script src="../../static/assets/js/echarts.min.js"></script>
 <!--    <script src="../../static/assets/js/echarts-gl.min.js"></script>-->
 
@@ -317,9 +318,10 @@
                         </el-table-column>
                     </el-table>
                 </template>
-                <div id="graph" style="height: 500px; width: 100%">
+<!--                <div v-if="false" id="graph" style="height: 500px; width: 100%">-->
+<!--                </div>-->
+                <svg id="svg"></svg>
 
-                </div>
             </div>
 
             <script>
@@ -480,35 +482,164 @@
                                         o.value = 20;
                                         return o;
                                     });
-                                    var myChart = echarts.init(
-                                        document.getElementById('graph')
-                                    )
-                                    var option = {
-                                        tooltip: {
-                                            show: true,
-                                            trigger: 'item',
-                                            formatter(params) {
-                                                return params.data.name;
+                                    // var myChart = echarts.init(
+                                    //     document.getElementById('graph')
+                                    // )
+                                    // var option = {
+                                    //     tooltip: {
+                                    //         show: true,
+                                    //         trigger: 'item',
+                                    //         formatter(params) {
+                                    //             return params.data.name;
+                                    //         }
+                                    //     },
+                                    //     series: [{
+                                    //         type: 'graph',
+                                    //         layout: 'force',
+                                    //         roam: true,
+                                    //         symbolSize: (value, params) => {
+                                    //             return value;
+                                    //         },
+                                    //         draggable: true,
+                                    //         data: datas,
+                                    //         force: {
+                                    //             edgeLength: 200,
+                                    //             repulsion: 300,
+                                    //             // gravity: 0.1
+                                    //         },
+                                    //         links: links,
+                                    //     }]
+                                    // };
+                                    // console.log(datas);
+                                    // console.log(links);
+                                    // myChart.setOption(option);
+
+                                    d3.selectAll("#svg > *").remove();
+
+
+                                    for (var i = 0; i < links.length; i++) {
+                                        links[i].type = 'type';
+                                        delete links[i].name;
+                                    }
+                                    var nodes = new Array();
+                                    for (var i = 0; i < datas.length; i++) {
+                                        nodes.push({id: datas[i].name});
+                                    }
+                                    var types = new Array();
+                                    types.push('type');
+                                    console.log(nodes);
+                                    console.log(links);
+                                    console.log(types);
+
+                                    height = 600
+                                    width = 600
+                                    color = d3.scaleOrdinal(types, d3.schemeCategory10)
+                                    function linkArc(d) {
+                                        const r = Math.hypot(d.target.x - d.source.x, d.target.y - d.source.y);
+                                        return 'M' + d.source.x + ',' + d.source.y + 'A' + r + ',' + r + ' 0 0,1 ' + d.target.x + ',' + d.target.y;
+                                        // return `
+    // M${d.source.x},${d.source.y}
+    // A${r},${r} 0 0,1 ${d.target.x},${d.target.y}
+  // `;
+                                    }
+                                    drag = simulation => {
+
+                                        function dragstarted(d){
+                                            if(!d3.event.active){//event.active 属性对判断并发的拖拽手势序列中的 start 事件和 end 事件: 在拖拽手势开始时为0，在拖拽结束最后一个手势事件时为0
+                                                //这里就是drag的过程中
+                                                simulation.alphaTarget(0.8).restart();//设置衰减系数，对节点位置移动过程的模拟，数值越高移动越快，数值范围[0，1]
                                             }
-                                        },
-                                        series: [{
-                                            type: 'graph',
-                                            layout: 'force',
-                                            roam: true,
-                                            symbolSize: (value, params) => {
-                                                return value;
-                                            },
-                                            draggable: true,
-                                            data: datas,
-                                            force: {
-                                                edgeLength: 200,
-                                                repulsion: 300,
-                                                // gravity: 0.1
-                                            },
-                                            links: links,
-                                        }]
-                                    };
-                                    myChart.setOption(option);
+                                            d.fx = d.x;
+                                            d.fy = d.y;
+                                        }
+
+                                        function dragged(d){
+                                            d.fx = d3.event.x;
+                                            d.fy = d3.event.y;
+                                        }
+
+                                        function dragended(d) {
+                                            if (!d3.event.active) {
+                                                simulation.alphaTarget(0);
+                                            }
+                                            d.fx = null;
+                                            d.fy = null;
+                                        }
+
+                                        return d3.drag()
+                                            .on("start", dragstarted)
+                                            .on("drag", dragged)
+                                            .on("end", dragended);
+                                    }
+                                    const simulation = d3.forceSimulation(nodes)
+                                        .force("link", d3.forceLink(links).id(d => d.id))
+                                        .force("charge", d3.forceManyBody().strength(-400))
+                                        .force("x", d3.forceX())
+                                        .force("y", d3.forceY());
+
+                                    const svg = d3.select("#svg")
+                                        .attr("viewBox", [-width / 2, -height / 2, width, height])
+                                        .style("font", "12px sans-serif");
+
+                                    // Per-type markers, as they don't inherit styles.
+                                    svg.append("defs").selectAll("marker")
+                                        .data(types)
+                                        .join("marker")
+                                        .attr("id", d => `arrow-${d}`)
+                                        .attr("viewBox", "0 -5 10 10")
+                                        .attr("refX", 15)
+                                        .attr("refY", -0.5)
+                                        .attr("markerWidth", 6)
+                                        .attr("markerHeight", 6)
+                                        .attr("orient", "auto")
+                                        .append("path")
+                                        .attr("fill", color)
+                                        .attr("d", "M0,-5L10,0L0,5");
+
+                                    const link = svg.append("g")
+                                        .attr("fill", "none")
+                                        .attr("stroke-width", 1.5)
+                                        .selectAll("path")
+                                        .data(links)
+                                        .join("path")
+                                        .attr("stroke", d => color(d.type))
+                                        .attr("marker-end", "url(#arrow-)");
+
+
+
+                                    const node = svg.append("g")
+                                        .attr("fill", "currentColor")
+                                        .attr("stroke-linecap", "round")
+                                        .attr("stroke-linejoin", "round")
+                                        .selectAll("g")
+                                        .data(nodes)
+                                        .join("g")
+                                        .call(drag(simulation));
+
+                                    node.append("circle")
+                                        .attr("stroke", "white")
+                                        .attr("stroke-width", 1.5)
+                                        .attr("r", 4);
+
+                                    node.append("text")
+                                        .attr("x", 8)
+                                        .attr("y", "0.31em")
+                                        .text(d => d.id)
+                                        .clone(true).lower()
+                                        .attr("fill", "none")
+                                        .attr("stroke", "white")
+                                        .attr("stroke-width", 3);
+
+                                    simulation.on("tick", () => {
+                                        link.attr("d", linkArc);
+                                        // node.attr("transform", d => `translate(${d.x},${d.y})`);
+                                        node.attr("transform", d => 'translate(' + d.x + ',' + d.y +')');
+                                    });
+
+
+
+
+
                                 }
                             })
                         }

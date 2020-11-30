@@ -24,7 +24,7 @@ public class hierarchicalController {
         //String areaId = request.getParameter("areaId");
 
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("hierarchical");
+        mav.setViewName("/LRX/hierarchical");
 //        mav.addObject("keyAreaList");
         return mav;
     }
