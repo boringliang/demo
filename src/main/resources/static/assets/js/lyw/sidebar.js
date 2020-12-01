@@ -139,6 +139,11 @@ $(document).ready(function () {
         '                                        <span class="nav-text">违法事件</span>\n' +
         '                                    </a>\n' +
         '                                </li>\n' +
+        '                                <li>\n' +
+        '                                    <a class="sidenav-item-link" href="/lrx/AccidentEventgraph">\n' +
+        '                                        <span class="nav-text">事故事件</span>\n' +
+        '                                    </a>\n' +
+        '                                </li>\n' +
         // '                                <li>\n' +
         // '                                    <a class="sidenav-item-link" href="/weifa">\n' +
         // '                                        <span class="nav-text">交通违法</span>\n' +
@@ -176,7 +181,7 @@ $(document).ready(function () {
         '                                    <a href="/VIOLATIONDatagrid">违法事件数据展示</a>\n' +
         '                                </li>\n' +
         '                                <li>\n' +
-        '                                    <a href="/lrx/ee">事故事件数据展示</a>\n' +
+        '                                    <a href="/lrx/AccidentDatagrid">事故事件数据展示</a>\n' +
         '                                </li>\n' +
         '                            </div>\n' +
         '                        </ul>\n' +
