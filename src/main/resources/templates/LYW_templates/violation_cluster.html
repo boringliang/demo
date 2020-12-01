@@ -215,45 +215,118 @@
                 <p style="font-style: normal">以事件间的相异度为距离度量，对违法事件进行层次聚类</p>
                 <p style="font-style: normal">可以看出在相异度为0.7的时候，可以将事件聚类出合适的类别数量</p>
                 <img src="../../static/assets/img/violation_cluster/0_tree.jpg">
-                <p style="font-style: normal">以下是聚类得到的六个簇中，各个字段的值的分布情况</p>
+                <p style="font-style: normal">对违法事件的字段进行onehot编码，再进行降维得到事件的向量表示，再对违法事件进行层次聚类，得到如下的结果</p>
+                <img src="../../static/assets/img/violation_cluster/_tree.jpg">
+                <p style="font-style: normal">以下是聚类得到的簇中，各个字段的值的分布情况</p>
+                <p style="font-style: normal">上面的图使用相异度作为度量，下面的图对向量表示使用欧式距离作为度量</p>
                 <el-collapse v-model="activeNames" @change="handleChange">
                     <el-collapse-item title="车辆分类" name="1">
                         <img src="../../static/assets/img/violation_cluster/0_CLFL.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/CLFL.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="道路类型" name="2">
                         <img src="../../static/assets/img/violation_cluster/0_DLLX.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/DLLX.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="号牌种类" name="3">
                         <img src="../../static/assets/img/violation_cluster/0_HPZL.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/HPZL.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="交通方式" name="4">
                         <img src="../../static/assets/img/violation_cluster/0_JTFS.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/JTFS.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="使用性质" name="5">
                         <img src="../../static/assets/img/violation_cluster/0_SYXZ.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/SYXZ.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="违法行为" name="6">
                         <img src="../../static/assets/img/violation_cluster/0_WFXW.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/WFXW.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="准驾车型" name="7">
                         <img src="../../static/assets/img/violation_cluster/0_ZJCX.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/ZJCX.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="交款标记" name="8">
                         <img src="../../static/assets/img/violation_cluster/0_JKBJ.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/JKBJ.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="事故等级" name="9">
                         <img src="../../static/assets/img/violation_cluster/0_SGDJ.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/SGDJ.jpg">
                     </el-collapse-item>
                     <el-collapse-item title="其它字段" name="10">
                         <img src="../../static/assets/img/violation_cluster/0_XZQH.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/XZQH.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_WFDD.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/WFDD.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_LDDM.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/LDDM.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_JSZH.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/JSZH.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_JDCSYR.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/JDCSYR.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_HPHM.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/HPHM.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_FXJG.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/FXJG.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_DSR.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/DSR.jpg">
+                        <hr>
+                        <hr>
                         <img src="../../static/assets/img/violation_cluster/0_CLJG.jpg">
+                        <hr>
+                        <hr>
+                        <img src="../../static/assets/img/violation_cluster/CLJG.jpg">
                     </el-collapse-item>
                 </el-collapse>
             </div>
