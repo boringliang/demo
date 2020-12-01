@@ -358,20 +358,15 @@
                 </template>
                 <template id="slide">
                     <div class="block">
-                        <span class="demonstration">相似性度量(相异度选择一般小于0.5,相似度选择一般小于0.3)</span>
+                        <span class="demonstration">相似性度量(相异度选择一般小于0.5,相似度选择一般大于0.5)</span>
+                        <span class="demonstration">当选择相异度时，相异度在圆点以左范围的事件被连线;选择相似度时，相似度在圆点以右范围的事件被连线</span>
                         <!--                        </span><button @click="graph">生成图</button>-->
                         <el-slider v-model="value" :format-tooltip="formatTooltip"></el-slider>
                     </div>
                 </template>
-                <template id="time_slide">
-                    <div class="block">
-                        <span class="demonstration">每日时间选择</span>
-                        <el-slider v-model="value" range :max="86400" :format-tooltip="formatTooltip"></el-slider>
-                    </div>
-                </template>
                 <template id="calendar">
                     <div class="block">
-                        <span class="demonstration">时间</span>
+                        <span class="demonstration">日期选择</span>
                         <el-date-picker
                                 v-model="value"
                                 type="datetimerange"
@@ -381,6 +376,13 @@
                         </el-date-picker>
                     </div>
                 </template>
+                <template id="time_slide">
+                    <div class="block">
+                        <span class="demonstration">每日时段选择</span>
+                        <el-slider v-model="value" range :max="86400" :format-tooltip="formatTooltip"></el-slider>
+                    </div>
+                </template>
+
                 <template id="selections">
                     <el-select
                             v-model="value"
@@ -410,7 +412,7 @@
                         </el-option>
                     </el-select>
                 </template>
-                <div id="graph" style="height: 500px; width: 100%"></div>
+                <div id="graph" style="height: 800px; width: 100%"></div>
                 <template id="table" v-if=false>
                     <el-table
                             :data="tableData"
@@ -750,12 +752,23 @@
                                             matrix[i][j] = dis;
                                             // datas[i].value += 3;
                                             // datas[j].value += 3;
-                                            if (dis < slide.value/100) {
-                                                links.push( {
-                                                    source: datas[i].name,
-                                                    target: datas[j].name,
-                                                });
+                                            if (similaritySelections.value === 'dis') {
+                                                if (dis < slide.value / 100) {
+                                                    links.push({
+                                                        source: datas[i].name,
+                                                        target: datas[j].name,
+                                                    });
+                                                }
                                             }
+                                            if (similaritySelections.value === 'sim') {
+                                                if (dis > slide.value / 100) {
+                                                    links.push({
+                                                        source: datas[i].name,
+                                                        target: datas[j].name,
+                                                    });
+                                                }
+                                            }
+
                                         }
                                     }
                                 }
@@ -1016,12 +1029,23 @@
                                     matrix[i][j] = dis;
                                     // datas[i].value += 3;
                                     // datas[j].value += 3;
-                                    if (dis < slide.value/100) {
-                                        links.push( {
-                                            source: datas[i].name,
-                                            target: datas[j].name,
-                                        });
+                                    if (similaritySelections.value === 'dis') {
+                                        if (dis < slide.value / 100) {
+                                            links.push({
+                                                source: datas[i].name,
+                                                target: datas[j].name,
+                                            });
+                                        }
                                     }
+                                    if (similaritySelections.value === 'sim') {
+                                        if (dis > slide.value / 100) {
+                                            links.push({
+                                                source: datas[i].name,
+                                                target: datas[j].name,
+                                            });
+                                        }
+                                    }
+
                                 }
                             }
                         }
@@ -1102,12 +1126,23 @@
                                     matrix[i][j] = dis;
                                     // datass[i].value += 3;
                                     // datass[j].value += 3;
-                                    if (dis < slide.value/100) {
-                                        links.push( {
-                                            source: datass[i].name,
-                                            target: datass[j].name,
-                                        });
+                                    if (similaritySelections.value === 'dis') {
+                                        if (dis < slide.value / 100) {
+                                            links.push({
+                                                source: datas[i].name,
+                                                target: datas[j].name,
+                                            });
+                                        }
                                     }
+                                    if (similaritySelections.value === 'sim') {
+                                        if (dis > slide.value / 100) {
+                                            links.push({
+                                                source: datas[i].name,
+                                                target: datas[j].name,
+                                            });
+                                        }
+                                    }
+
                                 }
                             }
                         }
@@ -1238,12 +1273,23 @@
                                     matrix[i][j] = dis;
                                     // datass[i].value += 3;
                                     // datass[j].value += 3;
-                                    if (dis < slide.value/100) {
-                                        links.push( {
-                                            source: datass[i].name,
-                                            target: datass[j].name,
-                                        });
+                                    if (similaritySelections.value === 'dis') {
+                                        if (dis < slide.value / 100) {
+                                            links.push({
+                                                source: datas[i].name,
+                                                target: datas[j].name,
+                                            });
+                                        }
                                     }
+                                    if (similaritySelections.value === 'sim') {
+                                        if (dis > slide.value / 100) {
+                                            links.push({
+                                                source: datas[i].name,
+                                                target: datas[j].name,
+                                            });
+                                        }
+                                    }
+
                                 }
                             }
                         }
@@ -1421,12 +1467,23 @@
                                         else {
                                             var dis = dissimilarity(datas[i],datas[j], similaritySelections.value);
                                             matrix[i][j] = dis;
-                                            if (dis < slide.value/100) {
-                                                links.push( {
-                                                    source: datas[i].name,
-                                                    target: datas[j].name,
-                                                });
+                                            if (similaritySelections.value === 'dis') {
+                                                if (dis < slide.value / 100) {
+                                                    links.push({
+                                                        source: datas[i].name,
+                                                        target: datas[j].name,
+                                                    });
+                                                }
                                             }
+                                            if (similaritySelections.value === 'sim') {
+                                                if (dis > slide.value / 100) {
+                                                    links.push({
+                                                        source: datas[i].name,
+                                                        target: datas[j].name,
+                                                    });
+                                                }
+                                            }
+
                                         }
                                     }
                                 }
