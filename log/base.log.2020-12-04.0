@@ -1,0 +1,13 @@
+2020-12-04 13:13:46,577 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 1404 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-12-04 13:13:46,627 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-12-04 13:13:46,637 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-12-04 13:14:06,454 INFO (StartupInfoLogger.java:61)- Started TrafficControlIntelligenceApplication in 20.759 seconds (JVM running for 27.875)
+2020-12-04 13:37:15,744 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 15220 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-12-04 13:37:15,752 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-12-04 13:37:15,753 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-12-04 13:38:20,311 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 14036 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-12-04 13:38:20,316 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-12-04 13:38:20,317 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default
+2020-12-04 13:40:44,764 INFO (StartupInfoLogger.java:55)- Starting TrafficControlIntelligenceApplication on DESKTOP-LHM218P with PID 16576 (started by 10356 in D:\myDoc\postgraduate\实验室\项目\海信项目\项目相关\web\重写的\TrafficControll-master)
+2020-12-04 13:40:44,767 DEBUG (StartupInfoLogger.java:56)- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-12-04 13:40:44,768 INFO (SpringApplication.java:651)- No active profile set, falling back to default profiles: default

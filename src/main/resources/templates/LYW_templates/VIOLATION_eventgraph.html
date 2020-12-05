@@ -50,11 +50,10 @@
     <!--    <script src="../../static/assets/LYWutils_traffic_jam.js"></script>-->
     <!--    <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=PUBBZ-ED365-YF4IE-QAFHX-EE6M2-UVFFI"></script>-->
     <script src="../../static/assets/js/lyw/sidebar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="../../static/assets/js/vue.min.js"></script>
+    <script src="../../static/assets/js/elementui.js"></script>
+<!--    <script src="../../static/assets/css/elementui.css"></script>-->
+    <link href="../../static/assets/css/elementui.css" rel="stylesheet"/>
 
 </head>
 
@@ -358,7 +357,7 @@
                 </template>
                 <template id="slide">
                     <div class="block">
-                        <span class="demonstration">相似性度量(相异度选择一般小于0.5,相似度选择一般大于0.5)</span>
+                        <span class="demonstration">违法事件相似性度量(相异度选择一般小于0.5,相似度选择一般大于0.5)</span>
                         <span class="demonstration">当选择相异度时，相异度在圆点以左范围的事件被连线;选择相似度时，相似度在圆点以右范围的事件被连线</span>
                         <!--                        </span><button @click="graph">生成图</button>-->
                         <el-slider v-model="value" :format-tooltip="formatTooltip"></el-slider>
